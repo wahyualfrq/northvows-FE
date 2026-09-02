@@ -10,7 +10,7 @@ export default function ContactSection({ onShowToast }) {
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
-    service: 'PPT Design & Sidang',
+    service: t.serviceOptions[0].value,
     deadline: '',
     message: ''
   });

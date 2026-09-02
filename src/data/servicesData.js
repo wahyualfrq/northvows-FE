@@ -2,7 +2,7 @@ export const servicesData = [
   {
     id: 'ppt',
     iconName: 'Presentation',
-    title: 'Desain PPT',
+    title: 'Design PPT Sidang & Presentasi',
     description: 'Slide presentasi modern, estetik, dan berbasis infografis visual. Sangat cocok untuk seminar proposal, skripsi, hingga pitch deck bisnis.',
     features: [
       'Master Template 16:9 HD',
@@ -12,31 +12,11 @@ export const servicesData = [
   {
     id: 'uiux',
     iconName: 'Figma',
-    title: 'Desain UI/UX (Figma)',
+    title: 'UI/UX Design (figma)',
     description: 'Desain antarmuka aplikasi mobile dan web berstandar industri dengan design system terstruktur, autolayout, dan prototipe interaktif.',
     features: [
       'Wireframe & High-Fidelity',
       'Clickable Interactive Prototype'
-    ]
-  },
-  {
-    id: 'web',
-    iconName: 'Globe',
-    title: 'Pengembangan Website',
-    description: 'Pengembangan website tugas akhir, landing page, hingga sistem informasi fullstack (Laravel, React, Next.js, PHP Native, Vue).',
-    features: [
-      'Source Code Rapi & Berkomentar',
-      'Bantuan Deployment & Demo'
-    ]
-  },
-  {
-    id: 'cv',
-    iconName: 'FileCheck2',
-    title: 'CV ATS & Portofolio Karir',
-    description: 'Pembuatan CV ramah sistem ATS untuk magang BUMN, MSIB, Kampus Merdeka, dan lowongan kerja fresh graduate dengan kata kunci optimal.',
-    features: [
-      'Format Word & PDF Standar HRD',
-      'Free Cover Letter Magang'
     ]
   },
   {
@@ -50,6 +30,16 @@ export const servicesData = [
     ]
   },
   {
+    id: 'web',
+    iconName: 'Globe',
+    title: 'Jasa Pembuatan Website',
+    description: 'Pengembangan website tugas akhir, landing page, hingga sistem informasi fullstack (Laravel, React, Next.js, PHP Native, Vue).',
+    features: [
+      'Source Code Rapi & Berkomentar',
+      'Bantuan Deployment & Demo'
+    ]
+  },
+  {
     id: 'coding',
     iconName: 'Code2',
     title: 'Tugas Informatika & Coding',
@@ -57,6 +47,16 @@ export const servicesData = [
     features: [
       'Penjelasan Logika Algoritma',
       'Visualisasi Data & Matplotlib'
+    ]
+  },
+  {
+    id: 'cv',
+    iconName: 'FileCheck2',
+    title: 'CV ATS Friendly',
+    description: 'Pembuatan CV ramah sistem ATS untuk magang BUMN, MSIB, Kampus Merdeka, dan lowongan kerja fresh graduate dengan kata kunci optimal.',
+    features: [
+      'Format Word & PDF Standar HRD',
+      'Free Cover Letter Magang'
     ]
   }
 ];

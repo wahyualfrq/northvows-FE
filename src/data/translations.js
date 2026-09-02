@@ -70,27 +70,15 @@ export const translations = {
       items: [
         {
           id: 'ppt',
-          title: 'Desain PPT',
+          title: 'Design PPT Sidang & Presentasi',
           description: 'Slide presentasi modern, estetik, dan berbasis infografis visual. Sangat cocok untuk seminar proposal, skripsi, hingga pitch deck bisnis.',
           features: ['Template Utama 16:9 HD', 'Naskah Script Presentasi Gratis']
         },
         {
           id: 'uiux',
-          title: 'Desain UI/UX (Figma)',
+          title: 'UI/UX Design (figma)',
           description: 'Desain antarmuka aplikasi mobile dan web berstandar industri dengan sistem desain terstruktur, autolayout, dan prototipe interaktif.',
           features: ['Wireframe & High-Fidelity', 'Prototipe Interaktif Siap Uji']
-        },
-        {
-          id: 'web',
-          title: 'Pengembangan Website',
-          description: 'Pengembangan website tugas akhir, landing page, hingga sistem informasi fullstack (Laravel, React, Next.js, PHP Native, Vue).',
-          features: ['Source Code Rapi & Berkomentar', 'Bantuan Deployment & Demo']
-        },
-        {
-          id: 'cv',
-          title: 'CV ATS & Portofolio Karir',
-          description: 'Pembuatan CV ramah sistem ATS untuk magang BUMN, MSIB, Kampus Merdeka, dan lowongan kerja fresh graduate dengan kata kunci optimal.',
-          features: ['Format Word & PDF Standar HRD', 'Surat Lamaran Magang Gratis']
         },
         {
           id: 'academic',
@@ -99,10 +87,22 @@ export const translations = {
           features: ['Ringkasan Jurnal Akurat', 'Garansi Bebas Plagiarisme']
         },
         {
+          id: 'web',
+          title: 'Jasa Pembuatan Website',
+          description: 'Pengembangan website tugas akhir, landing page, hingga sistem informasi fullstack (Laravel, React, Next.js, PHP Native, Vue).',
+          features: ['Source Code Rapi & Berkomentar', 'Bantuan Deployment & Demo']
+        },
+        {
           id: 'coding',
           title: 'Tugas Informatika & Coding',
           description: 'Penyelesaian problem algoritma, data science, machine learning (Python/Jupyter), struktur data (C++, Java), hingga scripting otomatis.',
           features: ['Penjelasan Logika Algoritma', 'Visualisasi Data & Matplotlib']
+        },
+        {
+          id: 'cv',
+          title: 'CV ATS Friendly',
+          description: 'Pembuatan CV ramah sistem ATS untuk magang BUMN, MSIB, Kampus Merdeka, dan lowongan kerja fresh graduate dengan kata kunci optimal.',
+          features: ['Format Word & PDF Standar HRD', 'Surat Lamaran Magang Gratis']
         }
       ]
     },
@@ -344,12 +344,12 @@ export const translations = {
       submitBtn: "Kirim via WhatsApp (Respon Cepat)",
       privacyNote: "🔒 Data Anda aman & terlindungi. Kami membalas dalam kurun waktu kurang dari 15 menit.",
       serviceOptions: [
-        { value: "PPT Design & Sidang", label: "PPT Design & Slide Sidang" },
-        { value: "UI/UX Design Figma", label: "UI/UX Design (Figma Mobile/Web)" },
-        { value: "Website Development", label: "Website Development (Fullstack/Frontend)" },
-        { value: "Coding & Machine Learning", label: "Coding & Machine Learning (Python/C++)" },
-        { value: "CV ATS & Portfolio", label: "CV ATS & Portofolio Karir" },
-        { value: "Academic Assistance & Skripsi", label: "Bimbingan Skripsi & Olah Data" }
+        { value: "Design PPT Sidang & Presentasi", label: "Design PPT Sidang & Presentasi" },
+        { value: "UI/UX Design (figma)", label: "UI/UX Design (figma)" },
+        { value: "Resume Jurnal & Makalah", label: "Resume Jurnal & Makalah" },
+        { value: "Jasa Pembuatan Website", label: "Jasa Pembuatan Website" },
+        { value: "Tugas Informatika & Coding", label: "Tugas Informatika & Coding" },
+        { value: "CV ATS Friendly", label: "CV ATS Friendly" }
       ]
     },
     // CTA Banner
@@ -448,7 +448,7 @@ export const translations = {
       items: [
         {
           id: 'ppt',
-          title: 'PPT Design',
+          title: 'PPT Defense & Presentation Design',
           description: 'Modern, aesthetic presentation slides with visual infographics. Perfect for proposal seminars, thesis defenses, or business pitch decks.',
           features: ['16:9 HD Master Template', 'Free Presentation Script']
         },
@@ -459,28 +459,28 @@ export const translations = {
           features: ['Wireframe & High-Fidelity', 'Clickable Interactive Prototype']
         },
         {
-          id: 'web',
-          title: 'Website Development',
-          description: 'Development of final project websites, landing pages, and fullstack information systems (Laravel, React, Next.js, PHP, Vue).',
-          features: ['Clean & Commented Source Code', 'Deployment & Demo Assistance']
-        },
-        {
-          id: 'cv',
-          title: 'ATS CV & Career Portfolio',
-          description: 'Creation of ATS-friendly resumes for internships, Kampus Merdeka, and fresh graduate job openings with optimal keywords.',
-          features: ['HRD Standard Word & PDF Format', 'Free Internship Cover Letter']
-        },
-        {
           id: 'academic',
           title: 'Journal & Paper Resume',
           description: 'Technical drafting of academic journal resumes, paper formatting, statistical data processing (SPSS, SmartPLS), and document review.',
           features: ['Accurate Journal Summary', 'Zero Plagiarism Guarantee']
         },
         {
+          id: 'web',
+          title: 'Website Development Services',
+          description: 'Development of final project websites, landing pages, and fullstack information systems (Laravel, React, Next.js, PHP, Vue).',
+          features: ['Clean & Commented Source Code', 'Deployment & Demo Assistance']
+        },
+        {
           id: 'coding',
           title: 'Informatics & Coding Assignments',
           description: 'Solving algorithm problems, data science, machine learning (Python/Jupyter), data structures (C++, Java), and automated scripting.',
           features: ['Algorithm Logic Explanation', 'Data Visualization & Matplotlib']
+        },
+        {
+          id: 'cv',
+          title: 'ATS Friendly Resume',
+          description: 'Creation of ATS-friendly resumes for internships, Kampus Merdeka, and fresh graduate job openings with optimal keywords.',
+          features: ['HRD Standard Word & PDF Format', 'Free Internship Cover Letter']
         }
       ]
     },
@@ -722,12 +722,12 @@ export const translations = {
       submitBtn: "Send via WhatsApp (Fast Response)",
       privacyNote: "🔒 Your data is safe & protected. We respond in under 15 minutes.",
       serviceOptions: [
-        { value: "PPT Design & Sidang", label: "PPT Design & Defense Slides" },
-        { value: "UI/UX Design Figma", label: "UI/UX Design (Figma Mobile/Web)" },
-        { value: "Website Development", label: "Website Development (Fullstack/Frontend)" },
-        { value: "Coding & Machine Learning", label: "Coding & Machine Learning (Python/C++)" },
-        { value: "CV ATS & Portfolio", label: "ATS Resume & Career Profile" },
-        { value: "Academic Assistance & Skripsi", label: "Thesis Guidance & Data Analysis" }
+        { value: "PPT Defense & Presentation Design", label: "PPT Defense & Presentation Design" },
+        { value: "UI/UX Design (Figma)", label: "UI/UX Design (Figma)" },
+        { value: "Journal & Paper Resume", label: "Journal & Paper Resume" },
+        { value: "Website Development Services", label: "Website Development Services" },
+        { value: "Informatics & Coding Assignments", label: "Informatics & Coding Assignments" },
+        { value: "ATS Friendly Resume", label: "ATS Friendly Resume" }
       ]
     },
     // CTA Banner
