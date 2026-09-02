@@ -33,7 +33,7 @@ export default function FaqSection() {
         </div>
 
         <div className="space-y-4" id="faqAccordion">
-          {faqData.map((faq, idx) => (
+          {(t.items || faqData).map((faq, idx) => (
             <FaqItem 
               key={idx}
               question={faq.question}

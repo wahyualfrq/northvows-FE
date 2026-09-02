@@ -326,7 +326,29 @@ export const translations = {
     faq: {
       badge: "Tanya Jawab",
       title: "Pertanyaan Sering Diajukan",
-      subtitle: "Pertanyaan yang sering diajukan seputar layanan pengerjaan di NorthVows."
+      subtitle: "Pertanyaan yang sering diajukan seputar layanan pengerjaan di NorthVows.",
+      items: [
+        {
+          question: "Berapa lama estimasi waktu pengerjaan tugas?",
+          answer: "Waktu pengerjaan disesuaikan dengan tingkat kesulitan dan deadline Anda. Untuk tugas slide PPT dan CV ATS bisa selesai dalam 5 - 12 Jam. Untuk project aplikasi web/mobile atau skripsi penuh berkisar antara 3 - 7 Hari kerja dengan update berkala."
+        },
+        {
+          question: "Apakah ada garansi jika hasil revisi ditolak dosen?",
+          answer: "Ya, NorthVows memberikan Garansi Bebas Revisi sesuai dengan brief awal sampai project dinyatakan selesai atau disetujui dosen pembimbing Anda tanpa biaya tambahan."
+        },
+        {
+          question: "Bagaimana dengan kerahasiaan identitas dan privasi saya?",
+          answer: "Privasi dan kerahasiaan identitas klien adalah prioritas nomor 1 kami. Data nama, kampus, dan file tugas tidak akan pernah dibagikan ke pihak ketiga atau dipublikasikan tanpa izin Anda."
+        },
+        {
+          question: "Apakah bisa request penjelasan atau sesi tanya jawab online?",
+          answer: "Tentu bisa! Khusus project coding, web development, kami menyediakan sesi briefing via Google Meet / Discord agar Anda memahami cara kerja kode."
+        },
+        {
+          question: "Bagaimana metode pembayarannya?",
+          answer: "Kami mendukung sistem Down Payment (DP) 50% di awal, dan pelunasan dilakukan setelah preview hasil pengerjaan kami perlihatkan kepada Anda. Pembayaran dapat dilakukan via Transfer Bank (BCA, Mandiri, BRI, BNI), QRIS, GoPay, OVO, ShopeePay, dan DANA."
+        }
+      ]
     },
     // Contact Form
     contact: {
@@ -704,7 +726,29 @@ export const translations = {
     faq: {
       badge: "Q & A",
       title: "Frequently Asked Questions",
-      subtitle: "Frequently asked questions about NorthVows services."
+      subtitle: "Frequently asked questions about NorthVows services.",
+      items: [
+        {
+          question: "How long is the estimated completion time for assignments?",
+          answer: "Completion time is tailored to the complexity and your deadline. PPT slides and ATS CVs can be completed in 5 - 12 hours. Web/mobile application projects or full thesis assistance range from 3 - 7 working days with regular updates."
+        },
+        {
+          question: "Is there a guarantee if revision results are rejected by the lecturer?",
+          answer: "Yes, NorthVows provides a Free Revision Guarantee based on the initial brief until the project is marked complete or approved by your academic advisor at no extra cost."
+        },
+        {
+          question: "What about my identity confidentiality and privacy?",
+          answer: "Client privacy and identity confidentiality are our #1 priority. Your name, university data, and project files will never be shared with third parties or published without your permission."
+        },
+        {
+          question: "Can I request an explanation or an online Q&A session?",
+          answer: "Of course! For coding and web development projects, we provide briefing sessions via Google Meet / Discord so you can thoroughly understand how the code works."
+        },
+        {
+          question: "What are the payment methods?",
+          answer: "We support a 50% Down Payment (DP) upfront, with final payment made after we present the completion preview to you. Payment can be made via Bank Transfer (BCA, Mandiri, BRI, BNI), QRIS, GoPay, OVO, ShopeePay, and DANA."
+        }
+      ]
     },
     // Contact Form
     contact: {
