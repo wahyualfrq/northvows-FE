@@ -2,12 +2,13 @@ export const translations = {
   id: {
     // Navbar
     nav: {
-      home: "Home",
+      home: "Beranda",
       services: "Layanan",
       portfolio: "Portofolio",
       products: "Produk",
       howItWorks: "Cara Kerja",
       reviews: "Ulasan",
+      chatProof: "Testimoni",
       faq: "FAQ",
       consultation: "Konsultasi Gratis",
       mobileConsultation: "Konsultasi Gratis Sekarang"
@@ -20,7 +21,7 @@ export const translations = {
       headlineLine3: "dengan Cepat & Profesional.",
       subheadline: "PPT, UI/UX, Website, Coding, CV ATS, hingga Source Code Premium untuk kebutuhan akademik dan portofolio dengan garansi tuntas.",
       btnOrder: "Pesan Sekarang",
-      btnPortfolio: "Lihat Portfolio",
+      btnPortfolio: "Lihat Portofolio",
       floatingBadge1: "Pengerjaan Kilat (24 - 48 Jam)",
       floatingBadge2: "Garansi Revisi & Nilai A",
       leftCardTitle: "CampusLife UI/UX",
@@ -28,45 +29,45 @@ export const translations = {
       centerCardBadge: "Fullstack",
       centerCardProgressTitle: "Progress Validasi Sidang",
       centerCardProgressStatus: "100% Siap",
-      centerCardRating: "A+ Rating",
-      centerCardPlag: "0% Safe",
+      centerCardRating: "Nilai A+",
+      centerCardPlag: "0% Plagiasi",
       centerCardDoc: "Lengkap",
       centerCardDemo: "Demo & Panduan Video",
       rightCardTitle: "Slide Sidang Skripsi",
-      rightCardBadge: "Score 98"
+      rightCardBadge: "Skor 98"
     },
     // Trust Metrics
     trust: {
-      completedProjects: "Project Selesai",
+      completedProjects: "Proyek Selesai",
       completedProjectsSub: "Tuntas tepat waktu",
       studentClients: "Klien Mahasiswa",
       studentClientsSub: "Dari 50+ Kampus di Indonesia",
       satisfactionRating: "Rating Kepuasan",
       satisfactionRatingSub: "Ulasan jujur & terverifikasi",
-      fastResponse: "Fast Response",
+      fastResponse: "Respon Cepat",
       fastResponseSub: "Konsultasi sigap 24/7"
     },
     // Services
     services: {
       badge: "Solusi Layanan Lengkap",
       title: "Layanan Unggulan NorthVows",
-      subtitle: "Dikerjakan langsung oleh tim expert yang berfokus pada kerapian, ketepatan deadline, dan garansi nilai terbaik.",
+      subtitle: "Dikerjakan langsung oleh tim pakar yang berfokus pada kerapian, ketepatan tenggat waktu, dan garansi nilai terbaik.",
       items: [
         {
           id: 'ppt',
-          title: 'PPT Design & Sidang',
+          title: 'Desain PPT & Presentasi Sidang',
           description: 'Slide presentasi modern, estetik, dan berbasis infografis visual. Sangat cocok untuk seminar proposal, skripsi, hingga pitch deck bisnis.',
-          features: ['Master Template 16:9 HD', 'Free Script Presentasi']
+          features: ['Template Utama 16:9 HD', 'Naskah Script Presentasi Gratis']
         },
         {
           id: 'uiux',
-          title: 'UI/UX Design (Figma)',
-          description: 'Desain antarmuka aplikasi mobile dan web berstandar industri dengan design system terstruktur, autolayout, dan prototipe interaktif.',
-          features: ['Wireframe & High-Fidelity', 'Clickable Interactive Prototype']
+          title: 'Desain UI/UX (Figma)',
+          description: 'Desain antarmuka aplikasi mobile dan web berstandar industri dengan sistem desain terstruktur, autolayout, dan prototipe interaktif.',
+          features: ['Wireframe & High-Fidelity', 'Prototipe Interaktif Siap Uji']
         },
         {
           id: 'web',
-          title: 'Website Development',
+          title: 'Pengembangan Website',
           description: 'Pengembangan website tugas akhir, landing page, hingga sistem informasi fullstack (Laravel, React, Next.js, PHP Native, Vue).',
           features: ['Source Code Rapi & Berkomentar', 'Bantuan Deployment & Demo']
         },
@@ -78,13 +79,13 @@ export const translations = {
         },
         {
           id: 'cv',
-          title: 'CV ATS & Portofolio',
+          title: 'CV ATS & Portofolio Karir',
           description: 'Pembuatan CV ramah sistem ATS untuk magang BUMN, MSIB, Kampus Merdeka, dan lowongan kerja fresh graduate dengan kata kunci optimal.',
-          features: ['Format Word & PDF Standar HRD', 'Free Cover Letter Magang']
+          features: ['Format Word & PDF Standar HRD', 'Surat Lamaran Magang Gratis']
         },
         {
           id: 'academic',
-          title: 'Academic Assistance',
+          title: 'Bimbingan Akademik & Skripsi',
           description: 'Bimbingan teknis skripsi/tugas akhir, olah data statistik (SPSS, SmartPLS), perapian format dokumen (LaTeX / Word), dan review jurnal.',
           features: ['Pendampingan 1-on-1 via Meet', 'Garansi Bebas Plagiarisme']
         }
@@ -92,9 +93,9 @@ export const translations = {
     },
     // Portfolio
     portfolio: {
-      badge: "Selected Works",
-      title: "Featured Portfolio",
-      subtitle: "Hasil karya pengerjaan tugas & project klien mahasiswa dengan standar pengerjaan profesional dan rapi.",
+      badge: "Karya Pilihan",
+      title: "Portofolio Unggulan",
+      subtitle: "Hasil karya pengerjaan tugas & proyek klien mahasiswa dengan standar pengerjaan profesional dan rapi.",
       filters: {
         all: "Semua",
         web: "Website",
@@ -102,13 +103,13 @@ export const translations = {
         ppt: "PPT & Deck",
         code: "Coding"
       },
-      detailBtn: "Detail"
+      detailBtn: "Detail Proyek"
     },
     // Products
     products: {
-      badge: "Ready-to-Use Digital Assets",
-      title: "Digital Products & Source Code",
-      subtitle: "Katalog template premium, starter kit kode bersih, dan aset desain siap pakai untuk mempercepat tugas atau project skripsi Anda.",
+      badge: "Aset Digital Siap Pakai",
+      title: "Produk Digital & Source Code",
+      subtitle: "Katalog template premium, starter kit kode bersih, dan aset desain siap pakai untuk mempercepat tugas atau proyek skripsi Anda.",
       buyBtn: "Beli Template",
       items: [
         {
@@ -123,7 +124,7 @@ export const translations = {
           id: 'campus-ui-kit',
           categoryBadge: 'Figma UI Kit',
           price: 'Rp 99.000',
-          title: 'Campus SuperApp UI Kit (60+ Screens)',
+          title: 'Campus SuperApp UI Kit (60+ Layar)',
           description: 'Komponen autolayout lengkap, panduan variabel token warna & tipografi, dark mode support, siap pakai untuk tugas akhir UI/UX.',
           waText: 'Halo NorthVows, saya tertarik membeli Campus SuperApp UI Kit'
         },
@@ -140,7 +141,7 @@ export const translations = {
           categoryBadge: 'Full Starter',
           price: 'Rp 129.000',
           title: 'React + Tailwind SaaS Starter Portal',
-          description: 'Boilerplate modern dengan autentikasi JWT, routing dinamis, dark/light theme, komponen form terstruktur, dan Lucide icons.',
+          description: 'Boilerplate modern dengan autentikasi JWT, routing dinamis, tema terang/gelap, komponen form terstruktur, dan Lucide icons.',
           waText: 'Halo NorthVows, saya tertarik membeli React Tailwind Starter Portal'
         },
         {
@@ -148,7 +149,7 @@ export const translations = {
           categoryBadge: 'CV ATS Pack',
           price: 'Rp 49.000',
           title: '10+ Template CV ATS Lolos Screening',
-          description: 'Template resume Microsoft Word teruji skor 90+ pada ATS checker top tier. Dilengkapi action verbs & panduan deskripsi pengalaman.',
+          description: 'Template resume Microsoft Word teruji skor 90+ pada ATS checker top tier. Dilengkapi kata kerja aksi & panduan deskripsi pengalaman.',
           waText: 'Halo NorthVows, saya tertarik membeli Template CV ATS Pack'
         },
         {
@@ -156,7 +157,7 @@ export const translations = {
           categoryBadge: 'Mobile App',
           price: 'Rp 179.000',
           title: 'Flutter E-Commerce Campus Starter',
-          description: 'Template aplikasi belanja kampus dengan State Management Provider, integrasi REST API, keranjang belanja, dan multi-bahasa.',
+          description: 'Template aplikasi belanja kampus dengan Provider State Management, integrasi REST API, keranjang belanja, dan multi-bahasa.',
           waText: 'Halo NorthVows, saya tertarik membeli Flutter E-Commerce Starter'
         }
       ]
@@ -164,7 +165,7 @@ export const translations = {
     // How It Works
     howItWorks: {
       badge: "Tahapan Pengerjaan",
-      title: "How It Works",
+      title: "Cara Kerja",
       subtitle: "Proses pemesanan transparan, cepat, dan terstruktur dalam 5 langkah mudah.",
       steps: [
         {
@@ -179,17 +180,17 @@ export const translations = {
         },
         {
           step: "03",
-          title: "Pengerjaan Expert",
-          description: "Project dieksekusi oleh tim spesialis sesuai kaidah akademik dan standar industri."
+          title: "Pengerjaan Pakar",
+          description: "Proyek dieksekusi oleh tim spesialis sesuai kaidah akademik dan standar industri."
         },
         {
           step: "04",
           title: "Review & Revisi",
-          description: "Anda mengecek draft hasil. Kami sediakan revisi bebas hingga sesuai ekspektasi."
+          description: "Anda mengecek draft hasil. Kami sediakan 2x revisi gratis."
         },
         {
           step: "05",
-          title: "Serah Terima & Beres",
+          title: "Serah Terima & Selesai",
           description: "Pengiriman master file utuh, penjelasan ringkas materi, dan siap dikumpulkan."
         }
       ]
@@ -197,9 +198,89 @@ export const translations = {
     // Testimonials
     testimonials: {
       badge: "Testimoni Klien",
-      title: "Real Feedback From Mahasiswa",
+      title: "Ulasan Jujur Klien Mahasiswa",
       subtitle: "Kisah nyata dari mahasiswa yang berhasil menyelesaikan skripsi, tugas besar, dan lolos magang impian bersama NorthVows.",
-      verified: "5.0 Terverifikasi"
+      verified: "5.0 Terverifikasi",
+      toggleFormBtn: "Tulis Ulasan Anda",
+      toggleFormHideBtn: "Tutup Form Ulasan",
+      formTitle: "Kirim Ulasan / Testimoni",
+      formSubtitle: "Pengalaman Anda akan langsung tampil di halaman ini secara real-time.",
+      nameLabel: "Nama Lengkap *",
+      namePlaceholder: "Contoh: Budi Santoso",
+      roleLabel: "Jurusan & Kampus *",
+      rolePlaceholder: "Contoh: Teknik Informatika — Universitas Padjadjaran",
+      quoteLabel: "Ulasan / Testimoni Anda *",
+      quotePlaceholder: "Ceritakan hasil pengerjaan, respon admin, atau kepuasan Anda setelah menggunakan layanan NorthVows...",
+      submitBtn: "Kirim Ulasan (Real-time Demo)",
+      successMsg: "Terima kasih! Ulasan Anda berhasil ditambahkan secara real-time."
+    },
+    // Chat Screenshots Proof Section
+    chatProof: {
+      badge: "Testimoni Klien",
+      title: "Bukti Real Chat & Kepuasan Klien",
+      subtitle: "Tangkapan layar percakapan asli WhatsApp dari para mahasiswa yang berhasil meraih nilai A dan lulus sidang bersama NorthVows.",
+      chats: [
+        {
+          id: 1,
+          name: "Siska TI - Univ Indonesia",
+          status: "Online",
+          badge: "Skripsi Web - Nilai A",
+          time: "14:22",
+          clientMessage: "Min, barusan sidang skripsinya dapet nilai A! Pengujinya terkesan banget sama kodenya yang rapi & arsitektur MVC nya. Makasih banyak ya NorthVows! 🙏✨",
+          adminMessage: "Alhamdulillah! Selamat ya kak Siska 🎉 Senang banget bisa bantu sampai lulus dengan nilai A perfect!",
+          image: null
+        },
+        {
+          id: 2,
+          name: "Dimas - ITB Business",
+          status: "Online",
+          badge: "PPT Sidang - 24 Jam",
+          time: "10:15",
+          clientMessage: "Slide PPT nya dapet pujian dari dosen pembimbing kak, visualnya estetik dan gak banyak dinding teks. Mantap bgt pengerjaannya mepet 24 jam selesai 👍",
+          adminMessage: "Sama-sama kak Dimas! Sukses selalu buat tahap pengerjaan revisi bab selanjutnya ya!",
+          image: null
+        },
+        {
+          id: 3,
+          name: "Rian - Ilmu Komputer UB",
+          status: "Online",
+          badge: "Python ML - Akurasi 96%",
+          time: "16:40",
+          clientMessage: "Model IndoBERT nya pas di-run akurasinya 96.8% kak. Penjelasan di kodenya jg paham pas ditanya dosen penguji pas demo tadi. Rekomended parah!",
+          adminMessage: "Mantap mas Rian! Garansi revisi tetap aktif jika ada masukan tambahan dari dosen ya.",
+          image: null
+        },
+        {
+          id: 4,
+          name: "Clara - Komunikasi Unpad",
+          status: "Online",
+          badge: "CV ATS - Lolos HRD",
+          time: "11:05",
+          clientMessage: "Kaaak! Aku lolos MSIB Kampus Merdeka di BUMN & Tech Startup! CV ATS hasil buatan NorthVows beneran tembus screening HRD 🎉😍",
+          adminMessage: "Wah selamat kak Clara! Ikut bangga, sukses selalu magangnya di tempat impian!",
+          image: null
+        },
+        {
+          id: 5,
+          name: "Naufal - Teknik UGM",
+          status: "Online",
+          badge: "Flutter Mobile - Reversal OK",
+          time: "19:12",
+          clientMessage: "Aplikasi Flutter kantin kampus selesai sebelum deadline sidang. Masternya juga diajarin cara running di Android Studio. Recomended!",
+          adminMessage: "Terima kasih mas Naufal! Semoga hasil sidangnya memuaskan ya!",
+          image: null
+        },
+        {
+          id: 6,
+          name: "Amanda - Ekonomi Unair",
+          status: "Online",
+          badge: "Olah Data SPSS - Bebas Plagiasi",
+          time: "08:50",
+          clientMessage: "Olah data SmartPLS nya akurat bgt hasilnya valid semua. Terus Turnitin nya 0% plagiasi. Fast respon banget miminnya!",
+          adminMessage: "Alhamdulillah! Terima kasih kak Amanda atas kepercayaannya pada NorthVows!",
+          image: null
+        }
+      ]
     },
     // Why Us
     whyUs: {
@@ -229,13 +310,13 @@ export const translations = {
     // FAQ
     faq: {
       badge: "Tanya Jawab",
-      title: "Frequently Asked Questions",
+      title: "Pertanyaan Sering Diajukan",
       subtitle: "Pertanyaan yang sering diajukan seputar layanan pengerjaan di NorthVows."
     },
     // Contact Form
     contact: {
-      badge: "Form Konsultasi",
-      title: "Contact Us & Order Now",
+      badge: "Formulir Konsultasi",
+      title: "Hubungi Kami & Pesan Sekarang",
       subtitle: "Isi formulir singkat di bawah ini atau hubungi admin langsung untuk estimasi harga instan.",
       nameLabel: "Nama Lengkap *",
       namePlaceholder: "Contoh: Farhan Pratama",
@@ -245,31 +326,31 @@ export const translations = {
       deadlineLabel: "Tenggat Waktu (Deadline) *",
       messageLabel: "Detail Brief / Instruksi Tugas *",
       messagePlaceholder: "Ceritakan topik tugas, bahasa pemrograman/software yang diminta dosen, serta spesifikasi khusus lainnya...",
-      submitBtn: "Kirim via WhatsApp (Fast Response)",
+      submitBtn: "Kirim via WhatsApp (Respon Cepat)",
       privacyNote: "🔒 Data Anda aman & terlindungi. Kami membalas dalam kurun waktu kurang dari 15 menit.",
       serviceOptions: [
         { value: "PPT Design & Sidang", label: "PPT Design & Slide Sidang" },
         { value: "UI/UX Design Figma", label: "UI/UX Design (Figma Mobile/Web)" },
         { value: "Website Development", label: "Website Development (Fullstack/Frontend)" },
         { value: "Coding & Machine Learning", label: "Coding & Machine Learning (Python/C++)" },
-        { value: "CV ATS & Portfolio", label: "CV ATS & Career Profile" },
+        { value: "CV ATS & Portfolio", label: "CV ATS & Portofolio Karir" },
         { value: "Academic Assistance & Skripsi", label: "Bimbingan Skripsi & Olah Data" }
       ]
     },
     // CTA Banner
     cta: {
       title: "Siap Selesaikan Tugas Tanpa Begadang & Stres?",
-      subtitle: "Konsultasikan kesulitan tugas Anda sekarang bersama tim expert NorthVows. Dapatkan diskon 15% untuk pemesanan pertama!",
+      subtitle: "Konsultasikan kesulitan tugas Anda sekarang bersama tim pakar NorthVows. Dapatkan diskon 15% untuk pemesanan pertama!",
       waBtn: "Chat WhatsApp Sekarang",
-      portfolioBtn: "Eksplor Portfolio"
+      portfolioBtn: "Eksplor Portofolio"
     },
     // Footer
     footer: {
       description: "Partner andalan mahasiswa untuk penyelesaian tugas, PPT presentasi, desain UI/UX, coding, skripsi, dan template portofolio profesional.",
       colServicesTitle: "Layanan",
       colInfoTitle: "Informasi",
-      copyright: "© 2026 NorthVows. All rights reserved. Solusi Tugas & Project Mahasiswa.",
-      designedFor: "Designed with precision for Indonesian Students."
+      copyright: "© 2026 NorthVows. Hak Cipta Dilindungi. Solusi Tugas & Project Mahasiswa.",
+      designedFor: "Dirancang presisi untuk Mahasiswa Indonesia."
     },
     // Modal
     modal: {
@@ -291,6 +372,7 @@ export const translations = {
       products: "Products",
       howItWorks: "How It Works",
       reviews: "Reviews",
+      chatProof: "Testimonials",
       faq: "FAQ",
       consultation: "Free Consultation",
       mobileConsultation: "Get Free Consultation Now"
@@ -312,7 +394,7 @@ export const translations = {
       centerCardProgressTitle: "Thesis Defense Progress",
       centerCardProgressStatus: "100% Ready",
       centerCardRating: "A+ Rating",
-      centerCardPlag: "0% Safe",
+      centerCardPlag: "0% Plagiarism",
       centerCardDoc: "Complete",
       centerCardDemo: "Demo & Video Guide",
       rightCardTitle: "Thesis Presentation Slide",
@@ -385,7 +467,7 @@ export const translations = {
         ppt: "PPT & Deck",
         code: "Coding"
       },
-      detailBtn: "Detail"
+      detailBtn: "Project Details"
     },
     // Products
     products: {
@@ -468,7 +550,7 @@ export const translations = {
         {
           step: "04",
           title: "Review & Revision",
-          description: "Check the initial draft. We offer free revisions until it meets your expectations."
+          description: "You can review the draft result. We provide up to 2 free revisions."
         },
         {
           step: "05",
@@ -482,7 +564,87 @@ export const translations = {
       badge: "Client Testimonials",
       title: "Real Feedback From Students",
       subtitle: "True stories from students who successfully completed their thesis, major projects, and landed dream internships with NorthVows.",
-      verified: "5.0 Verified"
+      verified: "5.0 Verified",
+      toggleFormBtn: "Write Your Review",
+      toggleFormHideBtn: "Close Review Form",
+      formTitle: "Submit Your Review",
+      formSubtitle: "Your review will instantly appear on this page in real-time.",
+      nameLabel: "Full Name *",
+      namePlaceholder: "Example: Alex Morgan",
+      roleLabel: "Major & Campus *",
+      rolePlaceholder: "Example: Computer Science — Universitas Indonesia",
+      quoteLabel: "Your Review / Testimonial *",
+      quotePlaceholder: "Share your experience, admin response, or satisfaction using NorthVows services...",
+      submitBtn: "Submit Review (Real-time Demo)",
+      successMsg: "Thank you! Your review has been added in real-time."
+    },
+    // Chat Screenshots Proof Section
+    chatProof: {
+      badge: "Client Testimonials",
+      title: "Real Chat Proofs & Student Satisfaction",
+      subtitle: "Authentic WhatsApp chat screenshots from students who achieved Grade A and passed their thesis defenses with NorthVows.",
+      chats: [
+        {
+          id: 1,
+          name: "Siska CS - Univ Indonesia",
+          status: "Online",
+          badge: "Thesis Web - Grade A",
+          time: "14:22",
+          clientMessage: "Min, I just finished my defense and got Grade A! The examiners were super impressed with the clean code & MVC architecture. Thanks a lot NorthVows! 🙏✨",
+          adminMessage: "Alhamdulillah! Congratulations Siska 🎉 So glad we could help you graduate with a perfect Grade A!",
+          image: null
+        },
+        {
+          id: 2,
+          name: "Dimas - ITB Business",
+          status: "Online",
+          badge: "Thesis Deck - 24H Delivery",
+          time: "10:15",
+          clientMessage: "The PPT slides got praise from my advisor, the visuals are super aesthetic without walls of text. Awesome work finishing it in 24h! 👍",
+          adminMessage: "You are welcome Dimas! Wishing you success for the next chapter revision stage!",
+          image: null
+        },
+        {
+          id: 3,
+          name: "Rian - Computer Science UB",
+          status: "Online",
+          badge: "Python ML - 96% Accuracy",
+          time: "16:40",
+          clientMessage: "The IndoBERT model ran with 96.8% accuracy. The code documentation made it so easy to answer the examiner during the demo. Highly recommended!",
+          adminMessage: "Awesome Rian! The revision guarantee is still active if your advisor has additional notes.",
+          image: null
+        },
+        {
+          id: 4,
+          name: "Clara - Communication Unpad",
+          status: "Online",
+          badge: "ATS Resume - HRD Passed",
+          time: "11:05",
+          clientMessage: "Omg! I passed the Kampus Merdeka screening at Tokopedia & top BUMN! The ATS resume created by NorthVows really passed HRD screening 🎉😍",
+          adminMessage: "Congratulations Clara! So proud of you, wish you all the best at your dream company!",
+          image: null
+        },
+        {
+          id: 5,
+          name: "Naufal - Engineering UGM",
+          status: "Online",
+          badge: "Flutter Mobile - Revision OK",
+          time: "19:12",
+          clientMessage: "The Flutter mobile app for campus canteen was ready before defense deadline. Master code was also guided on how to run in Android Studio!",
+          adminMessage: "Thank you Naufal! Wishing you great defense results!",
+          image: null
+        },
+        {
+          id: 6,
+          name: "Amanda - Economics Unair",
+          status: "Online",
+          badge: "SPSS Analysis - 0% Plagiarism",
+          time: "08:50",
+          clientMessage: "The SmartPLS data processing was so accurate and all results valid. Plus Turnitin was 0% plagiarism. Super fast response from admin!",
+          adminMessage: "Alhamdulillah! Thank you Amanda for trusting NorthVows!",
+          image: null
+        }
+      ]
     },
     // Why Us
     whyUs: {

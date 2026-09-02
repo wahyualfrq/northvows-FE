@@ -11,7 +11,7 @@ import ServicesSection from '../sections/ServicesSection';
 import PortfolioSection from '../sections/PortfolioSection';
 import ProductsSection from '../sections/ProductsSection';
 import HowItWorksSection from '../sections/HowItWorksSection';
-import TestimonialsSection from '../sections/TestimonialsSection';
+import ChatProofSection from '../sections/ChatProofSection';
 import WhyUsSection from '../sections/WhyUsSection';
 import FaqSection from '../sections/FaqSection';
 import ContactSection from '../sections/ContactSection';
@@ -66,7 +66,7 @@ export default function Home() {
         <PortfolioSection onOpenModal={handleOpenModal} />
         <ProductsSection />
         <HowItWorksSection />
-        <TestimonialsSection />
+        <ChatProofSection />
         <WhyUsSection />
         <FaqSection />
         <ContactSection onShowToast={handleShowToast} />

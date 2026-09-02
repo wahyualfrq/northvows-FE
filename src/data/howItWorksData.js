@@ -20,7 +20,7 @@ export const howItWorksData = [
   {
     step: "04",
     title: "Review & Revisi",
-    description: "Anda mengecek draft hasil. Kami sediakan revisi bebas hingga sesuai ekspektasi.",
+    description: "Anda mengecek draft hasil. Kami sediakan 2x revisi gratis.",
     isPrimary: false
   },
   {

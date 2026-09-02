@@ -46,13 +46,13 @@ export default function Navbar() {
         </a>
 
         {/* Desktop Navigation Menu */}
-        <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+        <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600">
           <a href="#hero" className="hover:text-primary transition-colors">{t.home}</a>
           <a href="#services" className="hover:text-primary transition-colors">{t.services}</a>
           <a href="#portfolio" className="hover:text-primary transition-colors">{t.portfolio}</a>
           <a href="#products" className="hover:text-primary transition-colors">{t.products}</a>
           <a href="#how-it-works" className="hover:text-primary transition-colors">{t.howItWorks}</a>
-          <a href="#testimonials" className="hover:text-primary transition-colors">{t.reviews}</a>
+          <a href="#chat-proof" className="hover:text-primary transition-colors">{t.chatProof}</a>
           <a href="#faq" className="hover:text-primary transition-colors">{t.faq}</a>
         </nav>
 
@@ -109,7 +109,7 @@ export default function Navbar() {
             <a href="#portfolio" className="hover:text-primary mobile-link" onClick={closeMobileMenu}>{t.portfolio}</a>
             <a href="#products" className="hover:text-primary mobile-link" onClick={closeMobileMenu}>{t.products}</a>
             <a href="#how-it-works" className="hover:text-primary mobile-link" onClick={closeMobileMenu}>{t.howItWorks}</a>
-            <a href="#testimonials" className="hover:text-primary mobile-link" onClick={closeMobileMenu}>{t.reviews}</a>
+            <a href="#chat-proof" className="hover:text-primary mobile-link" onClick={closeMobileMenu}>{t.chatProof}</a>
             <a href="#faq" className="hover:text-primary mobile-link" onClick={closeMobileMenu}>{t.faq}</a>
             <a href="#contact" className="w-full text-center mt-2 px-5 py-3 text-sm font-semibold text-white bg-primary rounded-xl shadow-md mobile-link" onClick={closeMobileMenu}>
               {t.mobileConsultation}

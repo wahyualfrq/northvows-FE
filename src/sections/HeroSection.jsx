@@ -1,5 +1,5 @@
 import React from 'react';
-import { Sparkles, Eye, Clock, ShieldCheck, LayoutDashboard, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Eye, Clock, ShieldCheck, LayoutDashboard, CheckCircle2 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../data/translations';
 
@@ -37,7 +37,7 @@ export default function HeroSection() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
           <a href="#contact" className="w-full sm:w-auto px-8 py-3.5 text-base font-semibold text-white bg-primary hover:bg-navy rounded-full shadow-lg shadow-primary/25 hover:shadow-glow transition-all duration-300 hover:-translate-y-0.5 flex items-center justify-center gap-2">
             {t.btnOrder}
-            <Sparkles className="w-4 h-4" />
+            <ArrowRight className="w-4 h-4 ml-0.5" />
           </a>
           <a href="#portfolio" className="w-full sm:w-auto px-8 py-3.5 text-base font-semibold text-navy bg-white hover:bg-slate-50 border border-slate-200 rounded-full shadow-sm hover:border-primary/40 transition-all duration-300 flex items-center justify-center gap-2">
             {t.btnPortfolio}
