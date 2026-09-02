@@ -1,11 +1,18 @@
 import React from 'react';
-import { Star, Instagram, Music2, Twitter } from 'lucide-react';
+import { Star, Instagram, Music2, Twitter, ArrowUp } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../data/translations';
 
 export default function Footer() {
   const { language } = useLanguage();
   const t = translations[language].footer;
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
   return (
     <footer className="bg-[#00124D] text-slate-400 py-16 border-t border-white/5">
@@ -82,7 +89,17 @@ export default function Footer() {
 
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 gap-4">
           <p>{t.copyright}</p>
-          <p className="flex items-center gap-1">{t.designedFor}</p>
+          <div className="flex items-center gap-4">
+            <p className="flex items-center gap-1">{t.designedFor}</p>
+            <button
+              onClick={scrollToTop}
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-primary text-white text-xs font-semibold transition-all border border-white/10 group shadow-sm"
+              title="Scroll to Top"
+            >
+              <span>{language === 'id' ? 'Ke Atas' : 'Back to Top'}</span>
+              <ArrowUp className="w-3.5 h-3.5 group-hover:-translate-y-0.5 transition-transform" />
+            </button>
+          </div>
         </div>
 
       </div>

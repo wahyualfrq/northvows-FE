@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import PortfolioModal from '../components/PortfolioModal';
 import Toast from '../components/Toast';
+import FloatingWhatsapp from '../components/FloatingWhatsapp';
 
 import HeroSection from '../sections/HeroSection';
 import TrustMetricsSection from '../sections/TrustMetricsSection';
@@ -72,6 +73,8 @@ export default function Home() {
         <CtaSection />
       </main>
       <Footer />
+
+      <FloatingWhatsapp />
 
       <PortfolioModal 
         isOpen={modalState.isOpen}
