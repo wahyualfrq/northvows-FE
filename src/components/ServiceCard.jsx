@@ -6,6 +6,7 @@ import {
   Code2, 
   FileCheck2, 
   GraduationCap, 
+  FileText,
   Check 
 } from 'lucide-react';
 
@@ -15,7 +16,8 @@ const iconMap = {
   Globe,
   Code2,
   FileCheck2,
-  GraduationCap
+  GraduationCap,
+  FileText
 };
 
 export default function ServiceCard({ iconName, title, description, features }) {

@@ -22,19 +22,34 @@ export const translations = {
       subheadline: "PPT, UI/UX, Website, Coding, CV ATS, hingga Source Code Premium untuk kebutuhan akademik dan portofolio dengan garansi tuntas.",
       btnOrder: "Pesan Sekarang",
       btnPortfolio: "Lihat Portofolio",
-      floatingBadge1: "Pengerjaan Kilat (24 - 48 Jam)",
-      floatingBadge2: "Garansi Revisi & Nilai A",
-      leftCardTitle: "CampusLife UI/UX",
+      floatingBadge1: "Dipercaya Mahasiswa Seluruh Indonesia",
+      floatingBadge2: "Garansi Revisi",
+      leftCardTitle: "Campus SuperApp UI Kit",
+      leftCardSub: "Figma • Mobile System",
+      leftCardBadge: "UI/UX Design",
+      leftCardFeature1: "Jadwal & KRS Online",
+      leftCardTag1: "Auto Layout 5.0",
+      leftCardTag2: "Design Tokens",
+      leftCardStats: "60+ Screens Ready",
+      leftCardStatus: "Prototype Siap Uji",
       centerCardTitle: "Sistem Informasi Skripsi",
-      centerCardBadge: "Fullstack",
-      centerCardProgressTitle: "Progress Validasi Sidang",
-      centerCardProgressStatus: "100% Siap",
+      centerCardSub: "Laravel 11 + React",
+      centerCardBadge: "Fullstack Web",
+      centerCardProgressTitle: "Status Validasi Project",
+      centerCardProgressStatus: "100% Siap Demo",
       centerCardRating: "Nilai A+",
       centerCardPlag: "0% Plagiasi",
       centerCardDoc: "Lengkap",
+      centerCardFeatureList: "Multi-User Auth • Export PDF • Source Code Clean",
       centerCardDemo: "Demo & Panduan Video",
       rightCardTitle: "Slide Sidang Skripsi",
-      rightCardBadge: "Skor 98"
+      rightCardSub: "98 Slides • Editorial HD",
+      rightCardBadge: "PPT Design",
+      rightCardSlideTitle: "Bab I - IV Ringkasan Sidang",
+      rightCardSlideTag1: "Infografis 16:9",
+      rightCardSlideTag2: "Morph Animation",
+      rightCardStats: "Skor Presentasi 98/100",
+      rightCardStatus: "Melayani Custom"
     },
     // Trust Metrics
     trust: {
@@ -55,7 +70,7 @@ export const translations = {
       items: [
         {
           id: 'ppt',
-          title: 'Desain PPT & Presentasi Sidang',
+          title: 'Desain PPT',
           description: 'Slide presentasi modern, estetik, dan berbasis infografis visual. Sangat cocok untuk seminar proposal, skripsi, hingga pitch deck bisnis.',
           features: ['Template Utama 16:9 HD', 'Naskah Script Presentasi Gratis']
         },
@@ -72,12 +87,6 @@ export const translations = {
           features: ['Source Code Rapi & Berkomentar', 'Bantuan Deployment & Demo']
         },
         {
-          id: 'coding',
-          title: 'Coding & Machine Learning',
-          description: 'Penyelesaian problem algoritma, data science, machine learning (Python/Jupyter), struktur data (C++, Java), hingga scripting otomatis.',
-          features: ['Penjelasan Logika Algoritma', 'Visualisasi Data & Matplotlib']
-        },
-        {
           id: 'cv',
           title: 'CV ATS & Portofolio Karir',
           description: 'Pembuatan CV ramah sistem ATS untuk magang BUMN, MSIB, Kampus Merdeka, dan lowongan kerja fresh graduate dengan kata kunci optimal.',
@@ -85,9 +94,15 @@ export const translations = {
         },
         {
           id: 'academic',
-          title: 'Bimbingan Akademik & Skripsi',
-          description: 'Bimbingan teknis skripsi/tugas akhir, olah data statistik (SPSS, SmartPLS), perapian format dokumen (LaTeX / Word), dan review jurnal.',
-          features: ['Pendampingan 1-on-1 via Meet', 'Garansi Bebas Plagiarisme']
+          title: 'Resume Jurnal & Makalah',
+          description: 'Penyusunan resume jurnal ilmiah, perapian makalah, olah data statistik (SPSS, SmartPLS), dan penataan format dokumen akademik terstruktur.',
+          features: ['Ringkasan Jurnal Akurat', 'Garansi Bebas Plagiarisme']
+        },
+        {
+          id: 'coding',
+          title: 'Tugas Informatika & Coding',
+          description: 'Penyelesaian problem algoritma, data science, machine learning (Python/Jupyter), struktur data (C++, Java), hingga scripting otomatis.',
+          features: ['Penjelasan Logika Algoritma', 'Visualisasi Data & Matplotlib']
         }
       ]
     },
@@ -350,7 +365,6 @@ export const translations = {
       colServicesTitle: "Layanan",
       colInfoTitle: "Informasi",
       copyright: "© 2026 NorthVows. Hak Cipta Dilindungi. Solusi Tugas & Project Mahasiswa.",
-      designedFor: "Dirancang presisi untuk Mahasiswa Indonesia."
     },
     // Modal
     modal: {
@@ -386,19 +400,34 @@ export const translations = {
       subheadline: "PPT, UI/UX, Website, Coding, ATS Resume, and Premium Source Code for academic & portfolio needs with full completion guarantee.",
       btnOrder: "Order Now",
       btnPortfolio: "View Portfolio",
-      floatingBadge1: "Express Delivery (24 - 48 Hours)",
-      floatingBadge2: "Revision Guarantee & Grade A",
-      leftCardTitle: "CampusLife UI/UX",
+      floatingBadge1: "Trusted by Students All Over Indonesia",
+      floatingBadge2: "Revision Guarantee",
+      leftCardTitle: "Campus SuperApp UI Kit",
+      leftCardSub: "Figma • Mobile System",
+      leftCardBadge: "UI/UX Design",
+      leftCardFeature1: "Schedule & Course Online",
+      leftCardTag1: "Auto Layout 5.0",
+      leftCardTag2: "Design Tokens",
+      leftCardStats: "60+ Screens Ready",
+      leftCardStatus: "Prototype Ready",
       centerCardTitle: "Thesis Information System",
-      centerCardBadge: "Fullstack",
-      centerCardProgressTitle: "Thesis Defense Progress",
-      centerCardProgressStatus: "100% Ready",
-      centerCardRating: "A+ Rating",
+      centerCardSub: "Laravel 11 + React",
+      centerCardBadge: "Fullstack Web",
+      centerCardProgressTitle: "Project Validation Status",
+      centerCardProgressStatus: "100% Demo Ready",
+      centerCardRating: "Grade A+",
       centerCardPlag: "0% Plagiarism",
       centerCardDoc: "Complete",
+      centerCardFeatureList: "Multi-User Auth • Export PDF • Source Code Clean",
       centerCardDemo: "Demo & Video Guide",
-      rightCardTitle: "Thesis Presentation Slide",
-      rightCardBadge: "Score 98"
+      rightCardTitle: "Thesis Defense Slides",
+      rightCardSub: "98 Slides • Editorial HD",
+      rightCardBadge: "PPT Design",
+      rightCardSlideTitle: "Ch. I - IV Defense Summary",
+      rightCardSlideTag1: "16:9 Infographics",
+      rightCardSlideTag2: "Morph Animation",
+      rightCardStats: "Defense Score 98/100",
+      rightCardStatus: "Custom Service"
     },
     // Trust Metrics
     trust: {
@@ -419,7 +448,7 @@ export const translations = {
       items: [
         {
           id: 'ppt',
-          title: 'PPT Design & Presentation',
+          title: 'PPT Design',
           description: 'Modern, aesthetic presentation slides with visual infographics. Perfect for proposal seminars, thesis defenses, or business pitch decks.',
           features: ['16:9 HD Master Template', 'Free Presentation Script']
         },
@@ -436,22 +465,22 @@ export const translations = {
           features: ['Clean & Commented Source Code', 'Deployment & Demo Assistance']
         },
         {
-          id: 'coding',
-          title: 'Coding & Machine Learning',
-          description: 'Solving algorithm problems, data science, machine learning (Python/Jupyter), data structures (C++, Java), and automated scripting.',
-          features: ['Algorithm Logic Explanation', 'Data Visualization & Matplotlib']
-        },
-        {
           id: 'cv',
-          title: 'ATS CV & Portfolio',
+          title: 'ATS CV & Career Portfolio',
           description: 'Creation of ATS-friendly resumes for internships, Kampus Merdeka, and fresh graduate job openings with optimal keywords.',
           features: ['HRD Standard Word & PDF Format', 'Free Internship Cover Letter']
         },
         {
           id: 'academic',
-          title: 'Academic Assistance',
-          description: 'Technical guidance for thesis/final project, statistical data processing (SPSS, SmartPLS), document formatting (LaTeX / Word), and journal review.',
-          features: ['1-on-1 Mentoring via Meet', 'Zero Plagiarism Guarantee']
+          title: 'Journal & Paper Resume',
+          description: 'Technical drafting of academic journal resumes, paper formatting, statistical data processing (SPSS, SmartPLS), and document review.',
+          features: ['Accurate Journal Summary', 'Zero Plagiarism Guarantee']
+        },
+        {
+          id: 'coding',
+          title: 'Informatics & Coding Assignments',
+          description: 'Solving algorithm problems, data science, machine learning (Python/Jupyter), data structures (C++, Java), and automated scripting.',
+          features: ['Algorithm Logic Explanation', 'Data Visualization & Matplotlib']
         }
       ]
     },

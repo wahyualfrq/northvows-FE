@@ -1,7 +1,7 @@
 export const faqData = [
   {
     question: "Berapa lama estimasi waktu pengerjaan tugas?",
-    answer: "Waktu pengerjaan disesuaikan dengan tingkat kesulitan dan deadline Anda. Untuk tugas slide PPT dan CV ATS bisa selesai dalam 12 - 24 Jam. Untuk project aplikasi web/mobile atau skripsi penuh berkisar antara 3 - 7 Hari kerja dengan update berkala."
+    answer: "Waktu pengerjaan disesuaikan dengan tingkat kesulitan dan deadline Anda. Untuk tugas slide PPT dan CV ATS bisa selesai dalam 5 - 12 Jam. Untuk project aplikasi web/mobile atau skripsi penuh berkisar antara 3 - 7 Hari kerja dengan update berkala."
   },
   {
     question: "Apakah ada garansi jika hasil revisi ditolak dosen?",
@@ -13,7 +13,7 @@ export const faqData = [
   },
   {
     question: "Apakah bisa request penjelasan atau sesi tanya jawab online?",
-    answer: "Tentu bisa! Khusus project coding, web development, dan machine learning, kami menyediakan sesi briefing via Google Meet / Discord agar Anda memahami cara kerja kode dan siap saat sesi tanya jawab sidang."
+    answer: "Tentu bisa! Khusus project coding, web development, kami menyediakan sesi briefing via Google Meet / Discord agar Anda memahami cara kerja kode."
   },
   {
     question: "Bagaimana metode pembayarannya?",

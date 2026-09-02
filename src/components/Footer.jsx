@@ -1,7 +1,8 @@
 import React from 'react';
-import { Star, Instagram, Music2, Twitter, ArrowUp } from 'lucide-react';
+import { Instagram, Music2, Twitter, ArrowUp } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../data/translations';
+import logoImg from '../images/logo.webp';
 
 export default function Footer() {
   const { language } = useLanguage();
@@ -23,9 +24,11 @@ export default function Footer() {
           {/* Col 1: Brand Info */}
           <div className="md:col-span-2 space-y-4">
             <a href="#" className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center text-white font-bold text-sm">
-                <Star className="w-4 h-4" />
-              </div>
+              <img 
+                src={logoImg} 
+                alt="NorthVows Logo" 
+                className="w-9 h-9 object-contain" 
+              />
               <span className="text-xl font-bold text-white tracking-tight">North<span className="text-accent">Vows</span></span>
             </a>
             <p className="text-xs text-slate-300 max-w-sm leading-relaxed">
@@ -66,11 +69,13 @@ export default function Footer() {
           <div>
             <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-4">{t.colServicesTitle}</h4>
             <ul className="space-y-2 text-xs">
-              <li><a href="#services" className="hover:text-white transition-colors">PPT Design Sidang</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">UI/UX Design Figma</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Web Development</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Python & Machine Learning</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Pembuatan CV ATS</a></li>
+              {translations[language].services.items.map((service) => (
+                <li key={service.id}>
+                  <a href="#services" className="hover:text-white transition-colors">
+                    {service.title}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -90,7 +95,7 @@ export default function Footer() {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-400 gap-4">
           <p>{t.copyright}</p>
           <div className="flex items-center gap-4">
-            <p className="flex items-center gap-1">{t.designedFor}</p>
+            {t.designedFor && <p className="flex items-center gap-1">{t.designedFor}</p>}
             <button
               onClick={scrollToTop}
               className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-primary text-white text-xs font-semibold transition-all border border-white/10 group shadow-sm"

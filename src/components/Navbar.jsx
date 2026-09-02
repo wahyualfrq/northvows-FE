@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ArrowRight, Menu, X, Globe } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../data/translations';
+import logoImg from '../images/logo.webp';
 
 export default function Navbar() {
   const { language, toggleLanguage } = useLanguage();
@@ -33,12 +34,11 @@ export default function Navbar() {
         
         {/* Brand Logo */}
         <a href="#" className="flex items-center gap-2.5 group">
-          <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-white shadow-md shadow-primary/30 group-hover:scale-105 transition-transform">
-            {/* Geometric North Star Icon */}
-            <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-            </svg>
-          </div>
+          <img 
+            src={logoImg} 
+            alt="NorthVows Logo" 
+            className="w-10 h-10 object-contain group-hover:scale-105 transition-transform" 
+          />
           <div className="flex flex-col">
             <span className="text-xl font-bold tracking-tight text-navy">North<span className="text-primary">Vows</span></span>
             <span className="text-[10px] -mt-1 font-semibold tracking-wider text-slate-400 uppercase">Academic & Project</span>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Eye, Clock, ShieldCheck, LayoutDashboard, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Eye, GraduationCap, ShieldCheck, LayoutDashboard, CheckCircle2 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../data/translations';
 
@@ -14,7 +14,8 @@ export default function HeroSection() {
       <div className="absolute inset-0 pointer-events-none hero-glow-right"></div>
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-b from-blue-50/60 via-transparent to-transparent pointer-events-none"></div>
 
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      {/* Top Headline & Actions Container */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         
         {/* Subtle Pill Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100/80 mb-8 shadow-sm">
@@ -34,7 +35,7 @@ export default function HeroSection() {
         </p>
 
         {/* Hero Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">
           <a href="#contact" className="w-full sm:w-auto px-8 py-3.5 text-base font-semibold text-white bg-primary hover:bg-navy rounded-full shadow-lg shadow-primary/25 hover:shadow-glow transition-all duration-300 hover:-translate-y-0.5 flex items-center justify-center gap-2">
             {t.btnOrder}
             <ArrowRight className="w-4 h-4 ml-0.5" />
@@ -45,134 +46,161 @@ export default function HeroSection() {
           </a>
         </div>
 
-        {/* Dominant Fanned Project Showcase */}
-        <div className="relative w-full max-w-4xl mx-auto mt-4 perspective-container">
+      </div>
+
+      {/* Spacious Dominant Fanned Project Showcase */}
+      <div className="max-w-7xl lg:max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mt-4">
+        <div className="relative w-full perspective-container">
           
           {/* Floating Pill Badges around Showcase */}
-          <div className="absolute -top-6 left-2 sm:left-6 z-30 hidden sm:flex items-center gap-2 bg-white/95 backdrop-blur-md px-4 py-2 rounded-full border border-slate-200/80 shadow-card text-xs font-semibold text-navy animate-bounce" style={{ animationDuration: '4s' }}>
-            <Clock className="w-4 h-4 text-primary" />
+          <div className="absolute -top-6 left-4 sm:left-12 z-30 hidden sm:flex items-center gap-2 bg-white/95 backdrop-blur-md px-4 py-2 rounded-full border border-slate-200/80 shadow-card text-xs font-semibold text-navy animate-bounce" style={{ animationDuration: '4s' }}>
+            <GraduationCap className="w-4 h-4 text-primary" />
             <span>{t.floatingBadge1}</span>
           </div>
 
-          <div className="absolute -bottom-4 right-2 sm:right-6 z-30 hidden sm:flex items-center gap-2 bg-white/95 backdrop-blur-md px-4 py-2 rounded-full border border-slate-200/80 shadow-card text-xs font-semibold text-navy">
+          <div className="absolute -bottom-4 right-4 sm:right-12 z-30 hidden sm:flex items-center gap-2 bg-white/95 backdrop-blur-md px-4 py-2 rounded-full border border-slate-200/80 shadow-card text-xs font-semibold text-navy">
             <ShieldCheck className="w-4 h-4 text-emerald-500" />
             <span>{t.floatingBadge2}</span>
           </div>
 
           {/* Triple Layered Cards Stack */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 items-center max-w-md lg:max-w-none mx-auto">
             
-            {/* Left Card */}
-            <div className="hidden md:block tilt-left glass-card rounded-2xl p-5 shadow-card hover:shadow-card-hover border border-slate-200/80 text-left">
-              <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-100">
-                <div className="flex items-center gap-2">
-                  <div className="w-7 h-7 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center font-bold text-xs">F</div>
-                  <div>
-                    <h4 className="text-xs font-bold text-slateText">{t.leftCardTitle}</h4>
-                    <p className="text-[10px] text-mutedText">Figma Mobile System</p>
-                  </div>
+            {/* Left Card - UI/UX Design */}
+            <div className="hidden lg:block tilt-left glass-card rounded-2xl p-6 shadow-card hover:shadow-card-hover border border-slate-200/80 text-left bg-white/95 backdrop-blur-sm">
+              <div className="flex items-start justify-between pb-3.5 mb-4 border-b border-slate-100 gap-3">
+                <div>
+                  <h4 className="text-sm font-bold text-slateText leading-tight">{t.leftCardTitle}</h4>
+                  <p className="text-xs font-medium text-mutedText mt-0.5">{t.leftCardSub}</p>
                 </div>
-                <span className="text-[10px] font-bold px-2 py-0.5 bg-purple-50 text-purple-600 rounded-full">High-Fi</span>
+                <span className="shrink-0 text-xs font-bold px-3 py-1 bg-purple-50 text-purple-600 rounded-full border border-purple-100/80 whitespace-nowrap">{t.leftCardBadge}</span>
               </div>
-              <div className="space-y-2.5">
-                <div className="h-24 bg-gradient-to-br from-slate-100 to-slate-50 rounded-xl p-2.5 border border-slate-100 flex flex-col justify-between">
-                  <div className="flex justify-between items-center">
-                    <div className="w-12 h-2.5 bg-slate-200 rounded"></div>
-                    <div className="w-4 h-4 rounded-full bg-purple-200"></div>
-                  </div>
-                  <div className="grid grid-cols-2 gap-2">
-                    <div className="h-10 bg-white rounded-lg p-1.5 shadow-2xs border border-slate-100">
-                      <div className="w-full h-1.5 bg-purple-100 rounded mb-1"></div>
-                      <div className="w-3/4 h-1 bg-slate-100 rounded"></div>
+              <div className="space-y-3.5">
+                {/* Figma Canvas Wireframe Preview */}
+                <div className="h-32 bg-gradient-to-br from-purple-50/60 via-slate-50 to-purple-50/30 rounded-xl p-3.5 border border-purple-100/60 flex flex-col justify-between">
+                  <div className="flex justify-between items-center gap-2">
+                    <div className="flex items-center gap-1.5">
+                      <span className="w-2 h-2 rounded-full bg-purple-500 shrink-0"></span>
+                      <span className="text-xs font-semibold text-slate-700">{t.leftCardFeature1}</span>
                     </div>
-                    <div className="h-10 bg-white rounded-lg p-1.5 shadow-2xs border border-slate-100">
-                      <div className="w-full h-1.5 bg-blue-100 rounded mb-1"></div>
-                      <div className="w-2/3 h-1 bg-slate-100 rounded"></div>
+                    <span className="shrink-0 text-[10px] font-semibold px-2 py-0.5 bg-white rounded text-purple-600 border border-purple-100 shadow-2xs whitespace-nowrap">{t.leftCardTag1}</span>
+                  </div>
+                  <div className="grid grid-cols-2 gap-2.5 my-1">
+                    <div className="bg-white rounded-lg p-2.5 shadow-2xs border border-purple-100/80 flex flex-col justify-between">
+                      <div className="w-full h-2 bg-purple-100 rounded-full mb-1.5"></div>
+                      <div className="w-3/4 h-1.5 bg-slate-200 rounded-full"></div>
+                    </div>
+                    <div className="bg-white rounded-lg p-2.5 shadow-2xs border border-blue-100/80 flex flex-col justify-between">
+                      <div className="w-full h-2 bg-blue-100 rounded-full mb-1.5"></div>
+                      <div className="w-2/3 h-1.5 bg-slate-200 rounded-full"></div>
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-[10px] font-medium text-slate-500">{t.leftCardTag2}</span>
+                    <div className="flex -space-x-1">
+                      <div className="w-4 h-4 rounded-full bg-purple-400 border border-white"></div>
+                      <div className="w-4 h-4 rounded-full bg-blue-400 border border-white"></div>
+                      <div className="w-4 h-4 rounded-full bg-emerald-400 border border-white"></div>
                     </div>
                   </div>
                 </div>
-                <div className="flex items-center justify-between text-[11px] text-mutedText pt-1">
-                  <span>32 Components</span>
-                  <span className="text-emerald-600 font-semibold">Ready to test</span>
+                <div className="flex items-center justify-between text-xs pt-1">
+                  <span className="font-semibold text-slate-700">{t.leftCardStats}</span>
+                  <span className="text-emerald-600 font-bold flex items-center gap-1.5 shrink-0 whitespace-nowrap">
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    {t.leftCardStatus}
+                  </span>
                 </div>
               </div>
             </div>
 
             {/* Center Dominant Card */}
-            <div className="center-card glass-card rounded-2xl p-6 shadow-glow border border-blue-200/90 text-left bg-white relative z-20">
-              <div className="flex items-center justify-between pb-3.5 mb-4 border-b border-slate-100">
-                <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-primary text-white flex items-center justify-center font-bold text-sm shadow-sm">
-                    <LayoutDashboard className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-bold text-slateText">{t.centerCardTitle}</h4>
-                    <p className="text-xs text-mutedText">Laravel 11 + Tailwind + MySQL</p>
-                  </div>
+            <div className="center-card glass-card rounded-2xl p-6 sm:p-7 shadow-glow border border-blue-200/90 text-left bg-white relative z-20">
+              <div className="flex items-start justify-between pb-4 mb-4 border-b border-slate-100 gap-3">
+                <div>
+                  <h4 className="text-base sm:text-lg font-bold text-slateText leading-tight">{t.centerCardTitle}</h4>
+                  <p className="text-xs sm:text-sm font-medium text-mutedText mt-0.5">{t.centerCardSub}</p>
                 </div>
-                <span className="text-xs font-bold px-2.5 py-1 bg-blue-50 text-primary rounded-full">{t.centerCardBadge}</span>
+                <span className="shrink-0 text-xs font-bold px-3.5 py-1 bg-blue-50 text-primary rounded-full border border-blue-100 shadow-2xs whitespace-nowrap">{t.centerCardBadge}</span>
               </div>
               
-              <div className="space-y-3">
-                <div className="bg-slate-50 rounded-xl p-3.5 border border-slate-100">
-                  <div className="flex items-center justify-between mb-3">
-                    <div className="text-xs font-semibold text-slate-700">{t.centerCardProgressTitle}</div>
-                    <div className="text-xs font-bold text-primary">{t.centerCardProgressStatus}</div>
+              <div className="space-y-4">
+                <div className="bg-slate-50/90 rounded-xl p-4 border border-slate-100 space-y-3">
+                  <div className="flex items-center justify-between text-xs sm:text-sm font-bold text-slate-700 gap-2">
+                    <span>{t.centerCardProgressTitle}</span>
+                    <span className="text-primary font-extrabold flex items-center gap-1.5 shrink-0 whitespace-nowrap">
+                      <CheckCircle2 className="w-4 h-4 text-emerald-500" />
+                      {t.centerCardProgressStatus}
+                    </span>
                   </div>
-                  <div className="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
-                    <div className="bg-primary h-full rounded-full w-full"></div>
+                  <div className="w-full bg-slate-200 h-2.5 rounded-full overflow-hidden p-0.5">
+                    <div className="bg-gradient-to-r from-primary via-accent to-emerald-500 h-full rounded-full w-full shadow-xs"></div>
                   </div>
-                  <div className="grid grid-cols-3 gap-2 mt-3 text-center">
-                    <div className="bg-white p-2 rounded-lg border border-slate-100">
-                      <div className="text-[10px] text-mutedText">Clean Code</div>
-                      <div className="text-xs font-bold text-slateText">{t.centerCardRating}</div>
+                  
+                  {/* 3 Metrics */}
+                  <div className="grid grid-cols-3 gap-2 sm:gap-3 mt-3 text-center">
+                    <div className="bg-white p-2.5 rounded-lg border border-slate-100 shadow-2xs">
+                      <div className="text-[10px] sm:text-[11px] text-mutedText font-medium mb-0.5">Clean Code</div>
+                      <div className="text-xs sm:text-sm font-extrabold text-primary">{t.centerCardRating}</div>
                     </div>
-                    <div className="bg-white p-2 rounded-lg border border-slate-100">
-                      <div className="text-[10px] text-mutedText">Plagiarisme</div>
-                      <div className="text-xs font-bold text-emerald-600">{t.centerCardPlag}</div>
+                    <div className="bg-white p-2.5 rounded-lg border border-slate-100 shadow-2xs">
+                      <div className="text-[10px] sm:text-[11px] text-mutedText font-medium mb-0.5">Plagiarisme</div>
+                      <div className="text-xs sm:text-sm font-extrabold text-emerald-600">{t.centerCardPlag}</div>
                     </div>
-                    <div className="bg-white p-2 rounded-lg border border-slate-100">
-                      <div className="text-[10px] text-mutedText">Dokumentasi</div>
-                      <div className="text-xs font-bold text-slateText">{t.centerCardDoc}</div>
+                    <div className="bg-white p-2.5 rounded-lg border border-slate-100 shadow-2xs">
+                      <div className="text-[10px] sm:text-[11px] text-mutedText font-medium mb-0.5">Dokumentasi</div>
+                      <div className="text-xs sm:text-sm font-extrabold text-slate-800">{t.centerCardDoc}</div>
                     </div>
                   </div>
                 </div>
-                <div className="flex items-center justify-between text-xs text-mutedText pt-1">
-                  <span className="flex items-center gap-1.5"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" /> {t.centerCardDemo}</span>
-                  <span className="font-semibold text-navy">NorthVows Project</span>
+
+                {/* Feature Checklist Pill */}
+                <div className="px-3.5 py-2.5 bg-blue-50/60 rounded-lg border border-blue-100/70 text-xs font-medium text-slate-700 text-center sm:text-left leading-relaxed">
+                  <span>{t.centerCardFeatureList}</span>
+                </div>
+
+                <div className="flex items-center justify-between text-xs sm:text-sm text-mutedText pt-1 gap-2">
+                  <span className="flex items-center gap-1.5 font-medium text-slate-600">
+                    <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
+                    <span>{t.centerCardDemo}</span>
+                  </span>
+                  <span className="font-bold text-navy bg-slate-100 px-2.5 py-1 rounded-md text-xs shrink-0 whitespace-nowrap shadow-2xs">NorthVows Project</span>
                 </div>
               </div>
             </div>
 
             {/* Right Card */}
-            <div className="hidden md:block tilt-right glass-card rounded-2xl p-5 shadow-card hover:shadow-card-hover border border-slate-200/80 text-left">
-              <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-100">
-                <div className="flex items-center gap-2">
-                  <div className="w-7 h-7 rounded-lg bg-blue-50 text-primary flex items-center justify-center font-bold text-xs">PPT</div>
-                  <div>
-                    <h4 className="text-xs font-bold text-slateText">{t.rightCardTitle}</h4>
-                    <p className="text-[10px] text-mutedText">Editorial Infographic 25-Slide</p>
-                  </div>
+            <div className="hidden lg:block tilt-right glass-card rounded-2xl p-6 shadow-card hover:shadow-card-hover border border-slate-200/80 text-left bg-white/95 backdrop-blur-sm">
+              <div className="flex items-start justify-between pb-3.5 mb-4 border-b border-slate-100 gap-3">
+                <div>
+                  <h4 className="text-sm font-bold text-slateText leading-tight">{t.rightCardTitle}</h4>
+                  <p className="text-xs font-medium text-mutedText mt-0.5">{t.rightCardSub}</p>
                 </div>
-                <span className="text-[10px] font-bold px-2 py-0.5 bg-emerald-50 text-emerald-600 rounded-full">{t.rightCardBadge}</span>
+                <span className="shrink-0 text-xs font-bold px-3 py-1 bg-emerald-50 text-emerald-600 rounded-full border border-emerald-100/80 whitespace-nowrap">{t.rightCardBadge}</span>
               </div>
-              <div className="space-y-2.5">
-                <div className="h-24 bg-gradient-to-br from-blue-50/50 to-slate-50 rounded-xl p-2.5 border border-slate-100 flex flex-col justify-between">
-                  <div className="flex items-center gap-2">
-                    <div className="w-5 h-5 rounded-full bg-primary/20 flex items-center justify-center text-[10px] font-bold text-primary">01</div>
-                    <div className="w-24 h-2 bg-slate-300 rounded"></div>
+              <div className="space-y-3.5">
+                {/* Slide Mockup Canvas */}
+                <div className="h-32 bg-gradient-to-br from-emerald-50/50 via-slate-50 to-blue-50/30 rounded-xl p-3.5 border border-emerald-100/60 flex flex-col justify-between">
+                  <div className="flex items-center justify-between gap-2">
+                    <div className="flex items-center gap-1.5">
+                      <div className="w-4 h-4 rounded-full bg-emerald-600 text-white flex items-center justify-center text-[9px] font-bold shrink-0">01</div>
+                      <span className="text-xs font-semibold text-slate-700">{t.rightCardSlideTitle}</span>
+                    </div>
+                    <span className="shrink-0 text-[10px] font-bold px-2 py-0.5 bg-white text-emerald-700 rounded border border-emerald-200 shadow-2xs whitespace-nowrap">{t.rightCardSlideTag1}</span>
                   </div>
-                  <div className="space-y-1">
-                    <div className="w-full h-1.5 bg-slate-200 rounded"></div>
-                    <div className="w-4/5 h-1.5 bg-slate-200 rounded"></div>
+                  <div className="space-y-1.5 my-1">
+                    <div className="w-full h-1.5 bg-slate-200 rounded-full"></div>
+                    <div className="w-4/5 h-1.5 bg-emerald-200/80 rounded-full"></div>
+                    <div className="w-3/5 h-1.5 bg-slate-200 rounded-full"></div>
                   </div>
-                  <div className="flex justify-end">
-                    <span className="text-[9px] font-bold px-1.5 py-0.5 bg-white text-navy rounded border border-slate-200">Animation Ready</span>
+                  <div className="flex justify-between items-center pt-1">
+                    <span className="text-[10px] font-semibold text-mutedText">{t.rightCardSlideTag2}</span>
+                    <span className="text-[10px] font-bold px-2 py-0.5 bg-emerald-600 text-white rounded shadow-2xs whitespace-nowrap">Animation Ready</span>
                   </div>
                 </div>
-                <div className="flex items-center justify-between text-[11px] text-mutedText pt-1">
-                  <span>ATS & Slide Standar</span>
-                  <span className="text-primary font-semibold">100% Custom</span>
+                <div className="flex items-center justify-between text-xs pt-1">
+                  <span className="font-bold text-slate-700">{t.rightCardStats}</span>
+                  <span className="text-primary font-semibold shrink-0 whitespace-nowrap">{t.rightCardStatus}</span>
                 </div>
               </div>
             </div>
@@ -180,7 +208,6 @@ export default function HeroSection() {
           </div>
 
         </div>
-
       </div>
     </section>
   );
