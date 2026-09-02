@@ -1,18 +1,23 @@
 import React from 'react';
-import { Download } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../data/translations';
 
 export default function ProductCard({ item }) {
+  const { language } = useLanguage();
+  const t = translations[language].products;
+
   const {
     categoryBadge,
     badgeClasses,
     price,
-    title,
-    description,
-    downloadType,
     waText
   } = item;
 
-  const waUrl = `https://wa.me/6281234567890?text=${encodeURIComponent(waText)}`;
+  const langProduct = t.items.find(p => p.id === item.id) || item;
+  const title = langProduct.title;
+  const description = langProduct.description;
+
+  const waUrl = `https://wa.me/6282381409388?text=${encodeURIComponent(langProduct.waText || waText)}`;
 
   return (
     <div className="bg-surface rounded-2xl p-6 border border-slate-200/90 hover:border-primary/50 shadow-card hover:shadow-card-hover transition-all flex flex-col justify-between">
@@ -26,17 +31,14 @@ export default function ProductCard({ item }) {
           {description}
         </p>
       </div>
-      <div className="pt-4 border-t border-slate-200/70 flex items-center justify-between">
-        <span className="text-[11px] font-medium text-slate-500">
-          <Download className="w-3.5 h-3.5 inline mr-1 text-primary" /> {downloadType}
-        </span>
+      <div className="pt-4 border-t border-slate-200/70">
         <a 
           href={waUrl} 
           target="_blank" 
           rel="noopener noreferrer" 
-          className="px-3.5 py-1.5 bg-primary hover:bg-navy text-white text-xs font-semibold rounded-lg transition-colors"
+          className="w-full inline-flex items-center justify-center py-2.5 bg-primary hover:bg-navy text-white text-xs font-semibold rounded-xl transition-colors shadow-sm"
         >
-          Beli Template
+          {t.buyBtn}
         </a>
       </div>
     </div>

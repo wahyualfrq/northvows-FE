@@ -2,8 +2,13 @@ import React, { useState } from 'react';
 import { HelpCircle } from 'lucide-react';
 import FaqItem from '../components/FaqItem';
 import { faqData } from '../data/faqData';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../data/translations';
 
 export default function FaqSection() {
+  const { language } = useLanguage();
+  const t = translations[language].faq;
+
   const [openIndex, setOpenIndex] = useState(null);
 
   const handleToggle = (index) => {
@@ -17,13 +22,13 @@ export default function FaqSection() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100 mb-4">
             <HelpCircle className="w-4 h-4 text-primary" />
-            <span className="text-xs font-bold text-primary uppercase tracking-wide">Tanya Jawab</span>
+            <span className="text-xs font-bold text-primary uppercase tracking-wide">{t.badge}</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slateText mb-3">
-            Frequently Asked Questions
+            {t.title}
           </h2>
           <p className="text-mutedText text-sm sm:text-base">
-            Pertanyaan yang sering diajukan seputar layanan pengerjaan di NorthVows.
+            {t.subtitle}
           </p>
         </div>
 

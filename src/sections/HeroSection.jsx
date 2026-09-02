@@ -1,7 +1,12 @@
 import React from 'react';
 import { Sparkles, Eye, Clock, ShieldCheck, LayoutDashboard, CheckCircle2 } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../data/translations';
 
 export default function HeroSection() {
+  const { language } = useLanguage();
+  const t = translations[language].hero;
+
   return (
     <section id="hero" className="relative pt-12 pb-24 lg:pt-20 lg:pb-32 overflow-hidden">
       {/* Background Ambient Glow Accents */}
@@ -14,28 +19,28 @@ export default function HeroSection() {
         {/* Subtle Pill Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100/80 mb-8 shadow-sm">
           <span className="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
-          <span className="text-xs font-semibold text-primary uppercase tracking-wider">Solusi Tugas & Project Mahasiswa #1</span>
+          <span className="text-xs font-semibold text-primary uppercase tracking-wider">{t.badge}</span>
         </div>
 
         {/* Headline with Reference Visual Hierarchy */}
         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slateText leading-[1.15] max-w-4xl mx-auto mb-6">
-          Tugas Menumpuk? <br className="hidden sm:inline" />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-navy">Kami Bantu Selesaikan</span> dengan Cepat & Profesional.
+          {t.headlineLine1} <br className="hidden sm:inline" />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-navy">{t.headlineLine2}</span> {t.headlineLine3}
         </h1>
 
         {/* Subheadline */}
         <p className="text-base sm:text-lg lg:text-xl text-mutedText font-normal max-w-2xl mx-auto mb-10 leading-relaxed">
-          PPT, UI/UX, Website, Coding, CV ATS, hingga Source Code Premium untuk kebutuhan akademik dan portofolio dengan garansi tuntas.
+          {t.subheadline}
         </p>
 
         {/* Hero Buttons */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
           <a href="#contact" className="w-full sm:w-auto px-8 py-3.5 text-base font-semibold text-white bg-primary hover:bg-navy rounded-full shadow-lg shadow-primary/25 hover:shadow-glow transition-all duration-300 hover:-translate-y-0.5 flex items-center justify-center gap-2">
-            Pesan Sekarang
+            {t.btnOrder}
             <Sparkles className="w-4 h-4" />
           </a>
           <a href="#portfolio" className="w-full sm:w-auto px-8 py-3.5 text-base font-semibold text-navy bg-white hover:bg-slate-50 border border-slate-200 rounded-full shadow-sm hover:border-primary/40 transition-all duration-300 flex items-center justify-center gap-2">
-            Lihat Portfolio
+            {t.btnPortfolio}
             <Eye className="w-4 h-4 text-slate-400" />
           </a>
         </div>
@@ -46,25 +51,25 @@ export default function HeroSection() {
           {/* Floating Pill Badges around Showcase */}
           <div className="absolute -top-6 left-2 sm:left-6 z-30 hidden sm:flex items-center gap-2 bg-white/95 backdrop-blur-md px-4 py-2 rounded-full border border-slate-200/80 shadow-card text-xs font-semibold text-navy animate-bounce" style={{ animationDuration: '4s' }}>
             <Clock className="w-4 h-4 text-primary" />
-            <span>Pengerjaan Kilat (24 - 48 Jam)</span>
+            <span>{t.floatingBadge1}</span>
           </div>
 
           <div className="absolute -bottom-4 right-2 sm:right-6 z-30 hidden sm:flex items-center gap-2 bg-white/95 backdrop-blur-md px-4 py-2 rounded-full border border-slate-200/80 shadow-card text-xs font-semibold text-navy">
             <ShieldCheck className="w-4 h-4 text-emerald-500" />
-            <span>Garansi Revisi & Nilai A</span>
+            <span>{t.floatingBadge2}</span>
           </div>
 
           {/* Triple Layered Cards Stack */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
             
-            {/* Left Card: UI/UX & Mobile App Prototype */}
+            {/* Left Card */}
             <div className="hidden md:block tilt-left glass-card rounded-2xl p-5 shadow-card hover:shadow-card-hover border border-slate-200/80 text-left">
               <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-100">
                 <div className="flex items-center gap-2">
                   <div className="w-7 h-7 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center font-bold text-xs">F</div>
                   <div>
-                    <h4 className="text-xs font-bold text-slateText">CampusLife UI/UX</h4>
-                    <p class="text-[10px] text-mutedText">Figma Mobile System</p>
+                    <h4 className="text-xs font-bold text-slateText">{t.leftCardTitle}</h4>
+                    <p className="text-[10px] text-mutedText">Figma Mobile System</p>
                   </div>
                 </div>
                 <span className="text-[10px] font-bold px-2 py-0.5 bg-purple-50 text-purple-600 rounded-full">High-Fi</span>
@@ -93,7 +98,7 @@ export default function HeroSection() {
               </div>
             </div>
 
-            {/* Center Dominant Card: Fullstack Web / Dashboard Showcase */}
+            {/* Center Dominant Card */}
             <div className="center-card glass-card rounded-2xl p-6 shadow-glow border border-blue-200/90 text-left bg-white relative z-20">
               <div className="flex items-center justify-between pb-3.5 mb-4 border-b border-slate-100">
                 <div className="flex items-center gap-3">
@@ -101,19 +106,18 @@ export default function HeroSection() {
                     <LayoutDashboard className="w-4 h-4" />
                   </div>
                   <div>
-                    <h4 className="text-sm font-bold text-slateText">Sistem Informasi Skripsi</h4>
+                    <h4 className="text-sm font-bold text-slateText">{t.centerCardTitle}</h4>
                     <p className="text-xs text-mutedText">Laravel 11 + Tailwind + MySQL</p>
                   </div>
                 </div>
-                <span className="text-xs font-bold px-2.5 py-1 bg-blue-50 text-primary rounded-full">Fullstack</span>
+                <span className="text-xs font-bold px-2.5 py-1 bg-blue-50 text-primary rounded-full">{t.centerCardBadge}</span>
               </div>
               
-              {/* Clean Dashboard Mockup Preview Inside Card */}
               <div className="space-y-3">
                 <div className="bg-slate-50 rounded-xl p-3.5 border border-slate-100">
                   <div className="flex items-center justify-between mb-3">
-                    <div className="text-xs font-semibold text-slate-700">Progress Validasi Sidang</div>
-                    <div className="text-xs font-bold text-primary">100% Siap</div>
+                    <div className="text-xs font-semibold text-slate-700">{t.centerCardProgressTitle}</div>
+                    <div className="text-xs font-bold text-primary">{t.centerCardProgressStatus}</div>
                   </div>
                   <div className="w-full bg-slate-200 h-2 rounded-full overflow-hidden">
                     <div className="bg-primary h-full rounded-full w-full"></div>
@@ -121,36 +125,36 @@ export default function HeroSection() {
                   <div className="grid grid-cols-3 gap-2 mt-3 text-center">
                     <div className="bg-white p-2 rounded-lg border border-slate-100">
                       <div className="text-[10px] text-mutedText">Clean Code</div>
-                      <div className="text-xs font-bold text-slateText">A+ Rating</div>
+                      <div className="text-xs font-bold text-slateText">{t.centerCardRating}</div>
                     </div>
                     <div className="bg-white p-2 rounded-lg border border-slate-100">
                       <div className="text-[10px] text-mutedText">Plagiarisme</div>
-                      <div className="text-xs font-bold text-emerald-600">0% Safe</div>
+                      <div className="text-xs font-bold text-emerald-600">{t.centerCardPlag}</div>
                     </div>
                     <div className="bg-white p-2 rounded-lg border border-slate-100">
                       <div className="text-[10px] text-mutedText">Dokumentasi</div>
-                      <div className="text-xs font-bold text-slateText">Lengkap</div>
+                      <div className="text-xs font-bold text-slateText">{t.centerCardDoc}</div>
                     </div>
                   </div>
                 </div>
                 <div className="flex items-center justify-between text-xs text-mutedText pt-1">
-                  <span className="flex items-center gap-1.5"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" /> Demo & Panduan Video</span>
+                  <span className="flex items-center gap-1.5"><CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" /> {t.centerCardDemo}</span>
                   <span className="font-semibold text-navy">NorthVows Project</span>
                 </div>
               </div>
             </div>
 
-            {/* Right Card: Modern ATS CV & PPT Academic Deck */}
+            {/* Right Card */}
             <div className="hidden md:block tilt-right glass-card rounded-2xl p-5 shadow-card hover:shadow-card-hover border border-slate-200/80 text-left">
               <div className="flex items-center justify-between pb-3 mb-3 border-b border-slate-100">
                 <div className="flex items-center gap-2">
                   <div className="w-7 h-7 rounded-lg bg-blue-50 text-primary flex items-center justify-center font-bold text-xs">PPT</div>
                   <div>
-                    <h4 className="text-xs font-bold text-slateText">Slide Sidang Skripsi</h4>
+                    <h4 className="text-xs font-bold text-slateText">{t.rightCardTitle}</h4>
                     <p className="text-[10px] text-mutedText">Editorial Infographic 25-Slide</p>
                   </div>
                 </div>
-                <span className="text-[10px] font-bold px-2 py-0.5 bg-emerald-50 text-emerald-600 rounded-full">Score 98</span>
+                <span className="text-[10px] font-bold px-2 py-0.5 bg-emerald-50 text-emerald-600 rounded-full">{t.rightCardBadge}</span>
               </div>
               <div className="space-y-2.5">
                 <div className="h-24 bg-gradient-to-br from-blue-50/50 to-slate-50 rounded-xl p-2.5 border border-slate-100 flex flex-col justify-between">

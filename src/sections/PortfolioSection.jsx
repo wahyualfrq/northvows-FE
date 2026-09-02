@@ -2,16 +2,21 @@ import React, { useState } from 'react';
 import { Briefcase } from 'lucide-react';
 import PortfolioCard from '../components/PortfolioCard';
 import { portfolioData } from '../data/portfolioData';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../data/translations';
 
 export default function PortfolioSection({ onOpenModal }) {
+  const { language } = useLanguage();
+  const t = translations[language].portfolio;
+
   const [activeFilter, setActiveFilter] = useState('all');
 
   const filterTabs = [
-    { key: 'all', label: 'Semua' },
-    { key: 'web', label: 'Website' },
-    { key: 'uiux', label: 'UI/UX' },
-    { key: 'ppt', label: 'PPT & Deck' },
-    { key: 'code', label: 'Coding' }
+    { key: 'all', label: t.filters.all },
+    { key: 'web', label: t.filters.web },
+    { key: 'uiux', label: t.filters.uiux },
+    { key: 'ppt', label: t.filters.ppt },
+    { key: 'code', label: t.filters.code }
   ];
 
   const filteredItems = activeFilter === 'all'
@@ -26,13 +31,13 @@ export default function PortfolioSection({ onOpenModal }) {
           <div>
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100 mb-3">
               <Briefcase className="w-4 h-4 text-primary" />
-              <span className="text-xs font-bold text-primary uppercase tracking-wide">Selected Works</span>
+              <span className="text-xs font-bold text-primary uppercase tracking-wide">{t.badge}</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slateText">
-              Featured Portfolio
+              {t.title}
             </h2>
             <p className="text-mutedText text-sm sm:text-base mt-2 max-w-xl">
-              Hasil karya pengerjaan tugas & project klien mahasiswa dengan standar pengerjaan profesional dan rapi.
+              {t.subtitle}
             </p>
           </div>
 

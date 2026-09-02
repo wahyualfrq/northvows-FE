@@ -1,7 +1,12 @@
 import React, { useEffect } from 'react';
 import { X } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../data/translations';
 
 export default function PortfolioModal({ isOpen, modalData, onClose }) {
+  const { language } = useLanguage();
+  const t = translations[language].modal;
+
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') {
@@ -40,11 +45,11 @@ export default function PortfolioModal({ isOpen, modalData, onClose }) {
 
         <div className="py-5 space-y-4">
           <div>
-            <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Teknologi & Tools</h4>
+            <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">{t.techTitle}</h4>
             <p id="modalTech" className="text-xs font-medium text-navy bg-surface p-2.5 rounded-xl border border-slate-100">{modalData.tech}</p>
           </div>
           <div>
-            <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">Deskripsi Pengerjaan</h4>
+            <h4 className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">{t.descTitle}</h4>
             <p id="modalDesc" className="text-xs text-mutedText leading-relaxed">{modalData.desc}</p>
           </div>
         </div>
@@ -54,7 +59,7 @@ export default function PortfolioModal({ isOpen, modalData, onClose }) {
             onClick={onClose} 
             className="w-1/2 py-2.5 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition-colors"
           >
-            Tutup
+            {t.closeBtn}
           </button>
           <a 
             id="modalOrderBtn" 
@@ -62,7 +67,7 @@ export default function PortfolioModal({ isOpen, modalData, onClose }) {
             onClick={onClose} 
             className="w-1/2 py-2.5 text-xs font-semibold text-white bg-primary hover:bg-navy rounded-xl text-center transition-colors flex items-center justify-center"
           >
-            Pesan Serupa
+            {t.orderSimilarBtn}
           </a>
         </div>
       </div>

@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
 import { MessageSquare, Star } from 'lucide-react';
 import { testimonialsData } from '../data/testimonialsData';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../data/translations';
 
 export default function TestimonialsSection() {
+  const { language } = useLanguage();
+  const t = translations[language].testimonials;
+
   const [activeIndex, setActiveIndex] = useState(0);
   const [isFading, setIsFading] = useState(false);
 
@@ -28,14 +33,14 @@ export default function TestimonialsSection() {
         
         <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100 mb-4">
           <MessageSquare className="w-4 h-4 text-primary" />
-          <span className="text-xs font-bold text-primary uppercase tracking-wide">Testimoni Klien</span>
+          <span className="text-xs font-bold text-primary uppercase tracking-wide">{t.badge}</span>
         </div>
 
         <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slateText mb-4">
-          Real Feedback From Mahasiswa
+          {t.title}
         </h2>
         <p className="text-mutedText text-sm sm:text-base max-w-xl mx-auto mb-16">
-          Kisah nyata dari mahasiswa yang berhasil menyelesaikan skripsi, tugas besar, dan lolos magang impian bersama NorthVows.
+          {t.subtitle}
         </p>
 
         {/* Orbiting Avatar Constellation Graphic & Interactive Center Highlight */}
@@ -83,7 +88,7 @@ export default function TestimonialsSection() {
                 <Star className="w-4 h-4 text-amber-400 fill-amber-400" />
                 <Star className="w-4 h-4 text-amber-400 fill-amber-400" />
                 <Star className="w-4 h-4 text-amber-400 fill-amber-400" />
-                <span className="text-xs font-bold text-slate-700 ml-1.5">5.0 Verified</span>
+                <span className="text-xs font-bold text-slate-700 ml-1.5">{t.verified}</span>
               </div>
             </div>
           </div>

@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { Send, ArrowRight } from 'lucide-react';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../data/translations';
 
 export default function ContactSection({ onShowToast }) {
+  const { language } = useLanguage();
+  const t = translations[language].contact;
+
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -32,11 +37,11 @@ export default function ContactSection({ onShowToast }) {
       `_Mohon estimasi biaya dan waktu pengerjaannya ya min. Terima kasih!_`;
 
     if (onShowToast) {
-      onShowToast("Mengarahkan ke WhatsApp Official...");
+      onShowToast(translations[language].toast.redirecting);
     }
 
     setTimeout(() => {
-      window.open(`https://wa.me/6281234567890?text=${waText}`, '_blank');
+      window.open(`https://wa.me/6282381409388?text=${waText}`, '_blank');
     }, 1000);
   };
 
@@ -47,13 +52,13 @@ export default function ContactSection({ onShowToast }) {
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100 mb-3">
             <Send className="w-4 h-4 text-primary" />
-            <span className="text-xs font-bold text-primary uppercase tracking-wide">Form Konsultasi</span>
+            <span className="text-xs font-bold text-primary uppercase tracking-wide">{t.badge}</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slateText mb-3">
-            Contact Us & Order Now
+            {t.title}
           </h2>
           <p className="text-mutedText text-sm sm:text-base max-w-lg mx-auto">
-            Isi formulir singkat di bawah ini atau hubungi admin langsung untuk estimasi harga instan.
+            {t.subtitle}
           </p>
         </div>
 
@@ -63,27 +68,27 @@ export default function ContactSection({ onShowToast }) {
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
-                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Nama Lengkap *</label>
+                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">{t.nameLabel}</label>
                 <input 
                   type="text" 
                   id="name" 
                   required 
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="Contoh: Farhan Pratama" 
+                  placeholder={t.namePlaceholder} 
                   className="w-full px-4 py-3 text-sm bg-surface border border-slate-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all" 
                 />
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">WhatsApp / No. HP *</label>
+                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">{t.phoneLabel}</label>
                 <input 
                   type="tel" 
                   id="phone" 
                   required 
                   value={formData.phone}
                   onChange={handleChange}
-                  placeholder="0812-xxxx-xxxx" 
+                  placeholder={t.phonePlaceholder} 
                   className="w-full px-4 py-3 text-sm bg-surface border border-slate-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all" 
                 />
               </div>
@@ -91,7 +96,7 @@ export default function ContactSection({ onShowToast }) {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
-                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Kategori Layanan *</label>
+                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">{t.serviceLabel}</label>
                 <select 
                   id="service" 
                   required 
@@ -99,17 +104,14 @@ export default function ContactSection({ onShowToast }) {
                   onChange={handleChange}
                   className="w-full px-4 py-3 text-sm bg-surface border border-slate-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all text-slate-700"
                 >
-                  <option value="PPT Design & Sidang">PPT Design & Slide Sidang</option>
-                  <option value="UI/UX Design Figma">UI/UX Design (Figma Mobile/Web)</option>
-                  <option value="Website Development">Website Development (Fullstack/Frontend)</option>
-                  <option value="Coding & Machine Learning">Coding & Machine Learning (Python/C++)</option>
-                  <option value="CV ATS & Portfolio">CV ATS & Career Profile</option>
-                  <option value="Academic Assistance & Skripsi">Bimbingan Skripsi & Olah Data</option>
+                  {t.serviceOptions.map((opt, idx) => (
+                    <option key={idx} value={opt.value}>{opt.label}</option>
+                  ))}
                 </select>
               </div>
 
               <div>
-                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Tenggat Waktu (Deadline) *</label>
+                <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">{t.deadlineLabel}</label>
                 <input 
                   type="date" 
                   id="deadline" 
@@ -122,14 +124,14 @@ export default function ContactSection({ onShowToast }) {
             </div>
 
             <div>
-              <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Detail Brief / Instruksi Tugas *</label>
+              <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">{t.messageLabel}</label>
               <textarea 
                 id="message" 
                 required 
                 rows="4" 
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Ceritakan topik tugas, bahasa pemrograman/software yang diminta dosen, serta spesifikasi khusus lainnya..." 
+                placeholder={t.messagePlaceholder} 
                 className="w-full px-4 py-3 text-sm bg-surface border border-slate-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all"
               ></textarea>
             </div>
@@ -139,11 +141,11 @@ export default function ContactSection({ onShowToast }) {
                 type="submit" 
                 className="w-full py-4 text-base font-semibold text-white bg-primary hover:bg-navy rounded-xl shadow-lg shadow-primary/20 hover:shadow-glow transition-all duration-300 flex items-center justify-center gap-2"
               >
-                <span>Kirim via WhatsApp (Fast Response)</span>
+                <span>{t.submitBtn}</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
               <p className="text-center text-[11px] text-mutedText mt-3">
-                🔒 Data Anda aman & terlindungi. Kami membalas dalam kurun waktu kurang dari 15 menit.
+                {t.privacyNote}
               </p>
             </div>
 

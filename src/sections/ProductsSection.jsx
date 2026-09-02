@@ -2,8 +2,13 @@ import React from 'react';
 import { ShoppingBag } from 'lucide-react';
 import ProductCard from '../components/ProductCard';
 import { productsData } from '../data/productsData';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../data/translations';
 
 export default function ProductsSection() {
+  const { language } = useLanguage();
+  const t = translations[language].products;
+
   return (
     <section id="products" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -11,13 +16,13 @@ export default function ProductsSection() {
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100 mb-4">
             <ShoppingBag className="w-4 h-4 text-primary" />
-            <span className="text-xs font-bold text-primary uppercase tracking-wide">Ready-to-Use Digital Assets</span>
+            <span className="text-xs font-bold text-primary uppercase tracking-wide">{t.badge}</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slateText mb-4">
-            Digital Products & Source Code
+            {t.title}
           </h2>
           <p className="text-mutedText text-sm sm:text-base">
-            Katalog template premium, starter kit kode bersih, dan aset desain siap pakai untuk mempercepat tugas atau project skripsi Anda.
+            {t.subtitle}
           </p>
         </div>
 

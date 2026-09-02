@@ -8,7 +8,8 @@ import {
   Headphones, 
   BadgePercent 
 } from 'lucide-react';
-import { whyUsData } from '../data/whyUsData';
+import { useLanguage } from '../context/LanguageContext';
+import { translations } from '../data/translations';
 
 const iconMap = {
   Zap,
@@ -17,7 +18,12 @@ const iconMap = {
   BadgePercent
 };
 
+const pointIcons = ['Zap', 'CheckCheck', 'Headphones', 'BadgePercent'];
+
 export default function WhyUsSection() {
+  const { language } = useLanguage();
+  const t = translations[language].whyUs;
+
   return (
     <section className="py-24 bg-surface border-t border-slate-100">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,20 +40,20 @@ export default function WhyUsSection() {
               </div>
 
               <h3 className="text-2xl font-extrabold leading-snug mb-3">
-                Mengapa Mahasiswa Memilih NorthVows?
+                {t.title}
               </h3>
               <p className="text-sm text-blue-100 leading-relaxed mb-6">
-                Kami bukan sekadar joki biasa, melainkan partner pengerjaan terpercaya dengan standar akademis tinggi dan perlindungan data 100%.
+                {t.description}
               </p>
 
               <div className="space-y-3 pt-2">
                 <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm p-3 rounded-xl">
                   <Lock className="w-4 h-4 text-emerald-300" />
-                  <span className="text-xs font-semibold">100% Kerahasiaan Identitas Dijamin</span>
+                  <span className="text-xs font-semibold">{t.badge1}</span>
                 </div>
                 <div className="flex items-center gap-3 bg-white/10 backdrop-blur-sm p-3 rounded-xl">
                   <RefreshCw className="w-4 h-4 text-blue-200" />
-                  <span className="text-xs font-semibold">Bebas Revisi Sesuai Catatan Dosen</span>
+                  <span className="text-xs font-semibold">{t.badge2}</span>
                 </div>
               </div>
             </div>
@@ -55,8 +61,8 @@ export default function WhyUsSection() {
 
           {/* Right Column: Value Points */}
           <div className="lg:col-span-7 space-y-6">
-            {whyUsData.map((item, idx) => {
-              const IconComp = iconMap[item.iconName] || Zap;
+            {t.points.map((item, idx) => {
+              const IconComp = iconMap[pointIcons[idx]] || Zap;
               return (
                 <div key={idx} className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-xl bg-blue-50 text-primary flex items-center justify-center shrink-0 mt-1">
