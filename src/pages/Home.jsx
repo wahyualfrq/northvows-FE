@@ -4,6 +4,7 @@ import Footer from '../components/Footer';
 import PortfolioModal from '../components/PortfolioModal';
 import Toast from '../components/Toast';
 import FloatingWhatsapp from '../components/FloatingWhatsapp';
+import { useScrollReveal } from '../hooks/useScrollReveal';
 
 import HeroSection from '../sections/HeroSection';
 import TrustMetricsSection from '../sections/TrustMetricsSection';
@@ -19,6 +20,8 @@ import ContactSection from '../sections/ContactSection';
 import CtaSection from '../sections/CtaSection';
 
 export default function Home() {
+  useScrollReveal();
+
   const [modalState, setModalState] = useState({
     isOpen: false,
     data: null

@@ -184,7 +184,7 @@ export const translations = {
           "UI/UX Professional Design"
         ],
         benefits: [
-          "Priority Support",
+          "Prioritas Layanan",
           "Revisi Prioritas",
           "Dokumentasi Lengkap",
           "Source Code Rapi",
@@ -657,7 +657,7 @@ export const translations = {
           "UI/UX Professional Design"
         ],
         benefits: [
-          "Priority Support",
+          "Priority Service",
           "Priority Revisions",
           "Full Documentation",
           "Clean Source Code",

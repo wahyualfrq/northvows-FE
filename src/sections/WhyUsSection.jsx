@@ -31,7 +31,7 @@ export default function WhyUsSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Left Visual Highlight */}
-          <div className="lg:col-span-5 relative">
+          <div className="lg:col-span-5 relative reveal-on-scroll">
             <div className="w-full bg-gradient-to-tr from-primary to-accent rounded-3xl p-8 sm:p-10 text-white shadow-glow relative overflow-hidden">
               <div className="absolute -right-8 -bottom-8 w-40 h-40 bg-white/10 rounded-full blur-xl"></div>
               
@@ -64,7 +64,7 @@ export default function WhyUsSection() {
             {t.points.map((item, idx) => {
               const IconComp = iconMap[pointIcons[idx]] || Zap;
               return (
-                <div key={idx} className="flex items-start gap-4">
+                <div key={idx} className={`flex items-start gap-4 reveal-on-scroll delay-${(idx + 1) * 100}`}>
                   <div className="w-10 h-10 rounded-xl bg-blue-50 text-primary flex items-center justify-center shrink-0 mt-1">
                     <IconComp className="w-5 h-5" />
                   </div>

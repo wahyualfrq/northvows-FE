@@ -19,7 +19,7 @@ export default function FaqSection() {
     <section id="faq" className="py-24 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 reveal-on-scroll">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100 mb-4">
             <HelpCircle className="w-4 h-4 text-primary" />
             <span className="text-xs font-bold text-primary uppercase tracking-wide">{t.badge}</span>
@@ -32,7 +32,7 @@ export default function FaqSection() {
           </p>
         </div>
 
-        <div className="space-y-4" id="faqAccordion">
+        <div className="space-y-4 reveal-on-scroll delay-100" id="faqAccordion">
           {(t.items || faqData).map((faq, idx) => (
             <FaqItem 
               key={idx}

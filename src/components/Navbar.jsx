@@ -10,6 +10,7 @@ export default function Navbar() {
 
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,6 +18,12 @@ export default function Navbar() {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
+      }
+
+      const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (totalHeight > 0) {
+        const currentProgress = (window.scrollY / totalHeight) * 100;
+        setScrollProgress(Math.min(100, Math.max(0, currentProgress)));
       }
     };
 
@@ -119,6 +126,12 @@ export default function Navbar() {
           </div>
         </div>
       )}
+
+      {/* Thin Blue Scroll Progress Indicator Line */}
+      <div 
+        className="absolute bottom-0 left-0 h-[2.5px] bg-gradient-to-r from-primary via-accent to-navy transition-all duration-75 ease-out pointer-events-none z-50" 
+        style={{ width: `${scrollProgress}%` }} 
+      />
     </header>
   );
 }

@@ -15,7 +15,7 @@ export default function HeroSection() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-96 bg-gradient-to-b from-blue-50/60 via-transparent to-transparent pointer-events-none"></div>
 
       {/* Top Headline & Actions Container */}
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 reveal-on-scroll">
         
         {/* Subtle Pill Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100/80 mb-8 shadow-sm">
@@ -49,7 +49,7 @@ export default function HeroSection() {
       </div>
 
       {/* Spacious Dominant Fanned Project Showcase */}
-      <div className="max-w-7xl lg:max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mt-4">
+      <div className="max-w-7xl lg:max-w-[1340px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 mt-4 reveal-on-scroll delay-200">
         <div className="relative w-full perspective-container">
           
           {/* Floating Pill Badges around Showcase */}

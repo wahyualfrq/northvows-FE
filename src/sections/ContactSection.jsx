@@ -49,7 +49,7 @@ export default function ContactSection({ onShowToast }) {
     <section id="contact" className="py-24 bg-surface border-t border-slate-100">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 reveal-on-scroll">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100 mb-3">
             <Send className="w-4 h-4 text-primary" />
             <span className="text-xs font-bold text-primary uppercase tracking-wide">{t.badge}</span>
@@ -63,7 +63,7 @@ export default function ContactSection({ onShowToast }) {
         </div>
 
         {/* Form Card */}
-        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200/90 shadow-card">
+        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200/90 shadow-card reveal-on-scroll delay-100">
           <form id="orderForm" onSubmit={handleSubmit} className="space-y-6">
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

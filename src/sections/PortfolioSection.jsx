@@ -27,7 +27,7 @@ export default function PortfolioSection({ onOpenModal }) {
     <section id="portfolio" className="py-24 bg-surface border-t border-slate-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 reveal-on-scroll">
           <div>
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100 mb-3">
               <Briefcase className="w-4 h-4 text-primary" />
@@ -61,8 +61,10 @@ export default function PortfolioSection({ onOpenModal }) {
 
         {/* Behance Style Project Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredItems.map((item) => (
-            <PortfolioCard key={item.id} item={item} onOpenModal={onOpenModal} />
+          {filteredItems.map((item, idx) => (
+            <div key={item.id} className={`reveal-on-scroll delay-${((idx % 3) + 1) * 100}`}>
+              <PortfolioCard item={item} onOpenModal={onOpenModal} />
+            </div>
           ))}
         </div>
 

@@ -82,7 +82,7 @@ export default function PackagesSection() {
         'UI/UX Professional Design'
       ],
       benefits: t?.professional?.benefits || [
-        'Priority Support',
+        'Prioritas Layanan',
         'Revisi Prioritas',
         'Dokumentasi Lengkap',
         'Source Code Rapi',
@@ -109,7 +109,7 @@ export default function PackagesSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-16 lg:mb-20 reveal-on-scroll">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100 mb-4 shadow-sm">
             <Tag className="w-4 h-4 text-primary" />
             <span className="text-xs font-bold text-primary uppercase tracking-wide">
@@ -126,15 +126,16 @@ export default function PackagesSection() {
 
         {/* Pricing Cards Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-8 items-stretch max-w-7xl mx-auto">
-          {packagesData.map((pkg) => {
+          {packagesData.map((pkg, index) => {
             const waUrl = `https://wa.me/6282381409388?text=${encodeURIComponent(pkg.waMessage)}`;
             const cleanPrice = formatPrice(pkg.price);
+            const delayClass = index === 0 ? 'delay-100' : index === 1 ? 'delay-200' : 'delay-300';
 
             if (pkg.isFeatured) {
               return (
                 <div 
                   key={pkg.id}
-                  className="bg-gradient-to-b from-blue-50/90 via-white to-blue-50/40 rounded-3xl p-7 sm:p-8 lg:p-9 border-2 border-primary shadow-2xl shadow-blue-500/20 ring-4 ring-primary/10 lg:-translate-y-5 lg:scale-[1.04] transition-all duration-300 flex flex-col justify-between relative z-20 overflow-hidden"
+                  className={`bg-gradient-to-b from-blue-50/90 via-white to-blue-50/40 rounded-3xl p-7 sm:p-8 lg:p-9 border-2 border-primary shadow-2xl shadow-blue-500/20 ring-4 ring-primary/10 lg:-translate-y-5 lg:scale-[1.04] transition-all duration-300 flex flex-col justify-between relative z-20 overflow-hidden reveal-on-scroll ${delayClass}`}
                 >
                   {/* Top Gradient Bar */}
                   <div className="absolute top-0 inset-x-0 h-2 bg-gradient-to-r from-primary via-accent to-navy" />
@@ -248,7 +249,7 @@ export default function PackagesSection() {
             return (
               <div 
                 key={pkg.id}
-                className="bg-white rounded-3xl p-7 sm:p-8 lg:p-8 border border-slate-200 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between relative"
+                className={`bg-white rounded-3xl p-7 sm:p-8 lg:p-8 border border-slate-200 shadow-card hover:shadow-card-hover transition-all duration-300 flex flex-col justify-between relative reveal-on-scroll ${delayClass}`}
               >
                 <div>
                   {/* Title & Subtitle */}

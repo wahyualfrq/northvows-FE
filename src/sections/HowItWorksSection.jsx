@@ -11,17 +11,19 @@ export default function HowItWorksSection() {
     <section id="how-it-works" className="py-24 bg-surface border-t border-slate-100">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100 mb-4">
-          <Workflow className="w-4 h-4 text-primary" />
-          <span className="text-xs font-bold text-primary uppercase tracking-wide">{t.badge}</span>
-        </div>
+        <div className="reveal-on-scroll mb-20">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100 mb-4">
+            <Workflow className="w-4 h-4 text-primary" />
+            <span className="text-xs font-bold text-primary uppercase tracking-wide">{t.badge}</span>
+          </div>
 
-        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slateText mb-4">
-          {t.title}
-        </h2>
-        <p className="text-mutedText text-sm sm:text-base max-w-xl mx-auto mb-20">
-          {t.subtitle}
-        </p>
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-slateText mb-4">
+            {t.title}
+          </h2>
+          <p className="text-mutedText text-sm sm:text-base max-w-xl mx-auto">
+            {t.subtitle}
+          </p>
+        </div>
 
         {/* Timeline Connector Node System */}
         <div className="relative">
@@ -40,7 +42,7 @@ export default function HowItWorksSection() {
               }
 
               return (
-                <div key={idx} className="flex flex-col items-center group">
+                <div key={idx} className={`flex flex-col items-center group reveal-on-scroll delay-${(idx + 1) * 100}`}>
                   <div className={circleStyle}>
                     {item.step}
                   </div>

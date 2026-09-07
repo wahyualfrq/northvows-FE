@@ -13,7 +13,7 @@ export default function ProductsSection() {
     <section id="products" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100 mb-4">
             <ShoppingBag className="w-4 h-4 text-primary" />
             <span className="text-xs font-bold text-primary uppercase tracking-wide">{t.badge}</span>
@@ -27,8 +27,10 @@ export default function ProductsSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {productsData.map((product) => (
-            <ProductCard key={product.id} item={product} />
+          {productsData.map((product, idx) => (
+            <div key={product.id} className={`reveal-on-scroll delay-${((idx % 3) + 1) * 100}`}>
+              <ProductCard item={product} />
+            </div>
           ))}
         </div>
 

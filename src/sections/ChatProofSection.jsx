@@ -25,7 +25,7 @@ export default function ChatProofSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Centered Section Header - 100% Consistent with Site Layouting */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-100 mb-4">
             <MessageSquare className="w-4 h-4 text-primary" />
             <span className="text-xs font-bold text-primary uppercase tracking-wide">{t.badge}</span>
@@ -41,7 +41,7 @@ export default function ChatProofSection() {
         {/* 3-Column Side-by-Side Horizontal Carousel */}
         <div 
           ref={scrollRef}
-          className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-none py-2 scroll-smooth"
+          className="flex gap-6 overflow-x-auto snap-x snap-mandatory scrollbar-none py-2 scroll-smooth reveal-on-scroll delay-200"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           {t.chats.map((chat) => (
