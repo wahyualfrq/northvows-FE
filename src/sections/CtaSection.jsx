@@ -22,7 +22,7 @@ export default function CtaSection() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <a 
-            href="https://wa.me/6282381409388?text=Halo%20NorthVows,%20saya%20mau%20konsultasi%20tugas" 
+            href="https://wa.me/6282381409388?text=Halo%20Min%20Vows,%20saya%20mau%20konsultasi%20tugas" 
             target="_blank" 
             rel="noopener noreferrer"
             className="w-full sm:w-auto px-8 py-3.5 text-sm font-bold text-navy bg-white hover:bg-blue-50 rounded-full shadow-lg transition-all flex items-center justify-center gap-2"

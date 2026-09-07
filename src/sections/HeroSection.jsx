@@ -115,7 +115,7 @@ export default function HeroSection() {
             </div>
 
             {/* Center Dominant Card */}
-            <div className="center-card glass-card rounded-2xl p-6 sm:p-7 shadow-glow border border-blue-200/90 text-left bg-white relative z-20">
+            <div className="hidden sm:block center-card glass-card rounded-2xl p-6 sm:p-7 shadow-glow border border-blue-200/90 text-left bg-white relative z-20">
               <div className="flex items-start justify-between pb-4 mb-4 border-b border-slate-100 gap-3">
                 <div>
                   <h4 className="text-base sm:text-lg font-bold text-slateText leading-tight">{t.centerCardTitle}</h4>

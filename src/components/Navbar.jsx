@@ -110,17 +110,17 @@ export default function Navbar() {
 
       {/* Mobile Dropdown */}
       {isMobileMenuOpen && (
-        <div id="mobileMenu" className="md:hidden bg-white border-b border-slate-200 px-6 py-5 shadow-xl">
-          <div className="flex flex-col gap-4 text-base font-medium text-slate-700">
-            <a href="#hero" className="hover:text-primary mobile-link" onClick={closeMobileMenu}>{t.home}</a>
-            <a href="#services" className="hover:text-primary mobile-link" onClick={closeMobileMenu}>{t.services}</a>
-            <a href="#portfolio" className="hover:text-primary mobile-link" onClick={closeMobileMenu}>{t.portfolio}</a>
-            <a href="#paket-layanan" className="hover:text-primary mobile-link" onClick={closeMobileMenu}>{t.packages}</a>
-            <a href="#products" className="hover:text-primary mobile-link" onClick={closeMobileMenu}>{t.products}</a>
-            <a href="#how-it-works" className="hover:text-primary mobile-link" onClick={closeMobileMenu}>{t.howItWorks}</a>
-            <a href="#chat-proof" className="hover:text-primary mobile-link" onClick={closeMobileMenu}>{t.chatProof}</a>
-            <a href="#faq" className="hover:text-primary mobile-link" onClick={closeMobileMenu}>{t.faq}</a>
-            <a href="#contact" className="w-full text-center mt-2 px-5 py-3 text-sm font-semibold text-white bg-primary rounded-xl shadow-md mobile-link" onClick={closeMobileMenu}>
+        <div id="mobileMenu" className="md:hidden bg-white border-b border-slate-200 px-6 py-6 shadow-xl">
+          <div className="flex flex-col items-center justify-center gap-4 text-base font-medium text-slate-700 text-center">
+            <a href="#hero" className="hover:text-primary transition-colors w-full text-center mobile-link" onClick={closeMobileMenu}>{t.home}</a>
+            <a href="#services" className="hover:text-primary transition-colors w-full text-center mobile-link" onClick={closeMobileMenu}>{t.services}</a>
+            <a href="#portfolio" className="hover:text-primary transition-colors w-full text-center mobile-link" onClick={closeMobileMenu}>{t.portfolio}</a>
+            <a href="#paket-layanan" className="hover:text-primary transition-colors w-full text-center mobile-link" onClick={closeMobileMenu}>{t.packages}</a>
+            <a href="#products" className="hover:text-primary transition-colors w-full text-center mobile-link" onClick={closeMobileMenu}>{t.products}</a>
+            <a href="#how-it-works" className="hover:text-primary transition-colors w-full text-center mobile-link" onClick={closeMobileMenu}>{t.howItWorks}</a>
+            <a href="#chat-proof" className="hover:text-primary transition-colors w-full text-center mobile-link" onClick={closeMobileMenu}>{t.chatProof}</a>
+            <a href="#faq" className="hover:text-primary transition-colors w-full text-center mobile-link" onClick={closeMobileMenu}>{t.faq}</a>
+            <a href="#contact" className="w-full text-center mt-2 px-5 py-3 text-sm font-semibold text-white bg-primary hover:bg-navy rounded-xl shadow-md mobile-link transition-colors" onClick={closeMobileMenu}>
               {t.mobileConsultation}
             </a>
           </div>

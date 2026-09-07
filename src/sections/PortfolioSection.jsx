@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Briefcase } from 'lucide-react';
+import { Briefcase, ChevronDown, ChevronUp } from 'lucide-react';
 import PortfolioCard from '../components/PortfolioCard';
 import { portfolioData } from '../data/portfolioData';
 import { useLanguage } from '../context/LanguageContext';
@@ -10,6 +10,7 @@ export default function PortfolioSection({ onOpenModal }) {
   const t = translations[language].portfolio;
 
   const [activeFilter, setActiveFilter] = useState('all');
+  const [showAllMobile, setShowAllMobile] = useState(false);
 
   const filterTabs = [
     { key: 'all', label: t.filters.all },
@@ -18,6 +19,11 @@ export default function PortfolioSection({ onOpenModal }) {
     { key: 'ppt', label: t.filters.ppt },
     { key: 'code', label: t.filters.code }
   ];
+
+  const handleFilterChange = (key) => {
+    setActiveFilter(key);
+    setShowAllMobile(false);
+  };
 
   const filteredItems = activeFilter === 'all'
     ? portfolioData
@@ -46,7 +52,7 @@ export default function PortfolioSection({ onOpenModal }) {
             {filterTabs.map((tab) => (
               <button
                 key={tab.key}
-                onClick={() => setActiveFilter(tab.key)}
+                onClick={() => handleFilterChange(tab.key)}
                 className={`px-4 py-2 text-xs font-semibold rounded-full transition-all ${
                   activeFilter === tab.key
                     ? 'bg-navy text-white'
@@ -62,13 +68,41 @@ export default function PortfolioSection({ onOpenModal }) {
         {/* Behance Style Project Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredItems.map((item, idx) => (
-            <div key={item.id} className={`reveal-on-scroll delay-${((idx % 3) + 1) * 100}`}>
+            <div 
+              key={item.id} 
+              className={`reveal-on-scroll delay-${((idx % 3) + 1) * 100} ${
+                idx >= 3 && !showAllMobile ? 'hidden md:block' : 'block'
+              }`}
+            >
               <PortfolioCard item={item} onOpenModal={onOpenModal} />
             </div>
           ))}
         </div>
 
+        {/* Mobile Expand / Collapse Button */}
+        {filteredItems.length > 3 && (
+          <div className="mt-10 flex justify-center md:hidden">
+            <button
+              onClick={() => setShowAllMobile(!showAllMobile)}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white hover:bg-slate-100 text-slate-800 font-semibold text-xs transition-all border border-slate-200 shadow-sm active:scale-95"
+            >
+              {showAllMobile ? (
+                <>
+                  <span>{language === 'id' ? 'Tampilkan Lebih Sedikit' : 'Show Less'}</span>
+                  <ChevronUp className="w-4 h-4 text-primary" />
+                </>
+              ) : (
+                <>
+                  <span>{language === 'id' ? 'Lihat Lebih Banyak' : 'Show More Projects'}</span>
+                  <ChevronDown className="w-4 h-4 text-primary" />
+                </>
+              )}
+            </button>
+          </div>
+        )}
+
       </div>
     </section>
   );
 }
+

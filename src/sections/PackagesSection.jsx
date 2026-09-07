@@ -32,8 +32,8 @@ export default function PackagesSection() {
       ],
       btnText: t?.starter?.btnText || 'Mulai Sekarang',
       waMessage: language === 'en'
-        ? 'Hello NorthVows, I am interested in Academic Starter package'
-        : 'Halo NorthVows, saya tertarik dengan paket Academic Starter'
+        ? 'Hello Min Vows, I am interested in Academic Starter package'
+        : 'Halo Min Vows, saya tertarik dengan paket Academic Starter'
     },
     {
       id: 'pro',
@@ -61,8 +61,8 @@ export default function PackagesSection() {
       ],
       btnText: t?.pro?.btnText || 'Pilih Paket Pro',
       waMessage: language === 'en'
-        ? 'Hello NorthVows, I am interested in Academic Pro package'
-        : 'Halo NorthVows, saya tertarik dengan paket Academic Pro'
+        ? 'Hello Min Vows, I am interested in Academic Pro package'
+        : 'Halo Min Vows, saya tertarik dengan paket Academic Pro'
     },
     {
       id: 'professional',
@@ -91,8 +91,8 @@ export default function PackagesSection() {
       ],
       btnText: t?.professional?.btnText || 'Konsultasi Proyek',
       waMessage: language === 'en'
-        ? 'Hello NorthVows, I am interested in Professional Solution package'
-        : 'Halo NorthVows, saya tertarik dengan paket Professional Solution'
+        ? 'Hello Min Vows, I am interested in Professional Solution package'
+        : 'Halo Min Vows, saya tertarik dengan paket Professional Solution'
     }
   ];
 

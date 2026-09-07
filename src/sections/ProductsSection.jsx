@@ -1,5 +1,5 @@
-import React from 'react';
-import { ShoppingBag } from 'lucide-react';
+import React, { useState } from 'react';
+import { ShoppingBag, ChevronDown, ChevronUp } from 'lucide-react';
 import ProductCard from '../components/ProductCard';
 import { productsData } from '../data/productsData';
 import { useLanguage } from '../context/LanguageContext';
@@ -8,6 +8,7 @@ import { translations } from '../data/translations';
 export default function ProductsSection() {
   const { language } = useLanguage();
   const t = translations[language].products;
+  const [showAllMobile, setShowAllMobile] = useState(false);
 
   return (
     <section id="products" className="py-24 bg-white">
@@ -28,13 +29,41 @@ export default function ProductsSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {productsData.map((product, idx) => (
-            <div key={product.id} className={`reveal-on-scroll delay-${((idx % 3) + 1) * 100}`}>
+            <div 
+              key={product.id} 
+              className={`reveal-on-scroll delay-${((idx % 3) + 1) * 100} ${
+                idx >= 3 && !showAllMobile ? 'hidden md:block' : 'block'
+              }`}
+            >
               <ProductCard item={product} />
             </div>
           ))}
         </div>
 
+        {/* Mobile Expand / Collapse Button */}
+        {productsData.length > 3 && (
+          <div className="mt-10 flex justify-center md:hidden">
+            <button
+              onClick={() => setShowAllMobile(!showAllMobile)}
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-semibold text-xs transition-all border border-slate-200/80 shadow-sm active:scale-95"
+            >
+              {showAllMobile ? (
+                <>
+                  <span>{language === 'id' ? 'Tampilkan Lebih Sedikit' : 'Show Less'}</span>
+                  <ChevronUp className="w-4 h-4 text-primary" />
+                </>
+              ) : (
+                <>
+                  <span>{language === 'id' ? 'Lihat Lebih Banyak' : 'Show More Products'}</span>
+                  <ChevronDown className="w-4 h-4 text-primary" />
+                </>
+              )}
+            </button>
+          </div>
+        )}
+
       </div>
     </section>
   );
 }
+

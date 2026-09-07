@@ -5,7 +5,7 @@ export default function FloatingWhatsapp() {
   const { language } = useLanguage();
   
   const tooltipText = language === 'id' ? 'Chat Min Vows' : 'Chat Min Vows';
-  const waUrl = "https://wa.me/6282381409388?text=Halo%20NorthVows,%20saya%20mau%20konsultasi%20tugas";
+  const waUrl = "https://wa.me/6282381409388?text=Halo%20Min%20Vows,%20saya%20mau%20konsultasi%20tugas";
 
   return (
     <div className="fixed bottom-6 right-6 z-40 flex items-center gap-2 group">

@@ -206,7 +206,7 @@ export const translations = {
           price: 'Rp 149.000',
           title: 'SIM Magang Mahasiswa (Laravel 11)',
           description: 'Full source code sistem informasi manajemen magang kampus. Multi-user role, export laporan PDF & Excel, siap demo sidang.',
-          waText: 'Halo NorthVows, saya tertarik membeli Source Code SIM Magang Laravel 11'
+          waText: 'Halo Min Vows, saya tertarik membeli Source Code SIM Magang Laravel 11'
         },
         {
           id: 'campus-ui-kit',
@@ -214,7 +214,7 @@ export const translations = {
           price: 'Rp 99.000',
           title: 'Campus SuperApp UI Kit (60+ Layar)',
           description: 'Komponen autolayout lengkap, panduan variabel token warna & tipografi, dark mode support, siap pakai untuk tugas akhir UI/UX.',
-          waText: 'Halo NorthVows, saya tertarik membeli Campus SuperApp UI Kit'
+          waText: 'Halo Min Vows, saya tertarik membeli Campus SuperApp UI Kit'
         },
         {
           id: 'ppt-bundle',
@@ -222,7 +222,7 @@ export const translations = {
           price: 'Rp 79.000',
           title: 'Bundle 50+ Slide Sidang Skripsi',
           description: 'Desain slide profesional dengan animasi halus morph, template grafik chart, infografis timeline, dan panduan layout akademik.',
-          waText: 'Halo NorthVows, saya tertarik membeli Bundle 50+ Slide Sidang Skripsi'
+          waText: 'Halo Min Vows, saya tertarik membeli Bundle 50+ Slide Sidang Skripsi'
         },
         {
           id: 'react-starter',
@@ -230,7 +230,7 @@ export const translations = {
           price: 'Rp 129.000',
           title: 'React + Tailwind SaaS Starter Portal',
           description: 'Boilerplate modern dengan autentikasi JWT, routing dinamis, tema terang/gelap, komponen form terstruktur, dan Lucide icons.',
-          waText: 'Halo NorthVows, saya tertarik membeli React Tailwind Starter Portal'
+          waText: 'Halo Min Vows, saya tertarik membeli React Tailwind Starter Portal'
         },
         {
           id: 'cv-ats-pack',
@@ -238,7 +238,7 @@ export const translations = {
           price: 'Rp 49.000',
           title: '10+ Template CV ATS Lolos Screening',
           description: 'Template resume Microsoft Word teruji skor 90+ pada ATS checker top tier. Dilengkapi kata kerja aksi & panduan deskripsi pengalaman.',
-          waText: 'Halo NorthVows, saya tertarik membeli Template CV ATS Pack'
+          waText: 'Halo Min Vows, saya tertarik membeli Template CV ATS Pack'
         },
         {
           id: 'flutter-starter',
@@ -246,7 +246,7 @@ export const translations = {
           price: 'Rp 179.000',
           title: 'Flutter E-Commerce Campus Starter',
           description: 'Template aplikasi belanja kampus dengan Provider State Management, integrasi REST API, keranjang belanja, dan multi-bahasa.',
-          waText: 'Halo NorthVows, saya tertarik membeli Flutter E-Commerce Starter'
+          waText: 'Halo Min Vows, saya tertarik membeli Flutter E-Commerce Starter'
         }
       ]
     },

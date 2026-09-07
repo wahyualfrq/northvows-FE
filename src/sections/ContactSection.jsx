@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, ArrowRight } from 'lucide-react';
+import { Send, ArrowRight, ChevronDown } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { translations } from '../data/translations';
 
@@ -28,13 +28,17 @@ export default function ContactSection({ onShowToast }) {
 
     const { name, phone, service, deadline, message } = formData;
 
-    const waText = `*Halo Admin NorthVows, Saya Ingin Konsultasi Tugas*%0A%0A` +
-      `👤 *Nama:* ${encodeURIComponent(name)}%0A` +
-      `📱 *No. WhatsApp:* ${encodeURIComponent(phone)}%0A` +
-      `📌 *Layanan:* ${encodeURIComponent(service)}%0A` +
-      `📅 *Deadline:* ${encodeURIComponent(deadline)}%0A` +
-      `📝 *Detail Tugas:*%0A${encodeURIComponent(message)}%0A%0A` +
-      `_Mohon estimasi biaya dan waktu pengerjaannya ya min. Terima kasih!_`;
+    const rawMessage = `Halo Min Vows, Saya ingin Konsultasi:
+
+Nama: ${name}
+No. Whatsapp: ${phone}
+Layanan: ${service}
+Deadline: ${deadline}
+Detail Tugas: ${message}
+
+Mohon estimasi biaya dan waktu pengerjaannya ya min. Terima kasih!`;
+
+    const waText = encodeURIComponent(rawMessage);
 
     if (onShowToast) {
       onShowToast(translations[language].toast.redirecting);
@@ -63,7 +67,7 @@ export default function ContactSection({ onShowToast }) {
         </div>
 
         {/* Form Card */}
-        <div className="bg-white rounded-3xl p-8 sm:p-12 border border-slate-200/90 shadow-card reveal-on-scroll delay-100">
+        <div className="bg-white rounded-3xl p-6 sm:p-12 border border-slate-200/90 shadow-card reveal-on-scroll delay-100">
           <form id="orderForm" onSubmit={handleSubmit} className="space-y-6">
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -76,7 +80,7 @@ export default function ContactSection({ onShowToast }) {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder={t.namePlaceholder} 
-                  className="w-full px-4 py-3 text-sm bg-surface border border-slate-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all" 
+                  className="w-full px-4 py-3 text-sm bg-surface border border-slate-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all text-slate-700" 
                 />
               </div>
 
@@ -89,7 +93,7 @@ export default function ContactSection({ onShowToast }) {
                   value={formData.phone}
                   onChange={handleChange}
                   placeholder={t.phonePlaceholder} 
-                  className="w-full px-4 py-3 text-sm bg-surface border border-slate-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all" 
+                  className="w-full px-4 py-3 text-sm bg-surface border border-slate-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all text-slate-700" 
                 />
               </div>
             </div>
@@ -97,17 +101,20 @@ export default function ContactSection({ onShowToast }) {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
                 <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">{t.serviceLabel}</label>
-                <select 
-                  id="service" 
-                  required 
-                  value={formData.service}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 text-sm bg-surface border border-slate-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all text-slate-700"
-                >
-                  {t.serviceOptions.map((opt, idx) => (
-                    <option key={idx} value={opt.value}>{opt.label}</option>
-                  ))}
-                </select>
+                <div className="relative">
+                  <select 
+                    id="service" 
+                    required 
+                    value={formData.service}
+                    onChange={handleChange}
+                    className="w-full px-4 pr-10 py-3 text-sm bg-surface border border-slate-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all text-slate-700 font-medium appearance-none cursor-pointer"
+                  >
+                    {t.serviceOptions.map((opt, idx) => (
+                      <option key={idx} value={opt.value}>{opt.label}</option>
+                    ))}
+                  </select>
+                  <ChevronDown className="w-4 h-4 text-slate-400 absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+                </div>
               </div>
 
               <div>
@@ -132,17 +139,17 @@ export default function ContactSection({ onShowToast }) {
                 value={formData.message}
                 onChange={handleChange}
                 placeholder={t.messagePlaceholder} 
-                className="w-full px-4 py-3 text-sm bg-surface border border-slate-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all"
+                className="w-full px-4 py-3 text-sm bg-surface border border-slate-200 rounded-xl focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all text-slate-700"
               ></textarea>
             </div>
 
             <div className="pt-2">
               <button 
                 type="submit" 
-                className="w-full py-4 text-base font-semibold text-white bg-primary hover:bg-navy rounded-xl shadow-lg shadow-primary/20 hover:shadow-glow transition-all duration-300 flex items-center justify-center gap-2"
+                className="w-full py-3.5 sm:py-4 px-3 sm:px-4 text-xs xs:text-sm sm:text-base font-bold sm:font-semibold text-white bg-primary hover:bg-navy rounded-xl shadow-lg shadow-primary/20 hover:shadow-glow transition-all duration-300 flex items-center justify-center gap-2 group active:scale-[0.99]"
               >
-                <span>{t.submitBtn}</span>
-                <ArrowRight className="w-4 h-4" />
+                <span className="whitespace-nowrap sm:whitespace-normal">{t.submitBtn}</span>
+                <ArrowRight className="w-4 h-4 shrink-0 group-hover:translate-x-0.5 transition-transform" />
               </button>
               <p className="text-center text-[11px] text-mutedText mt-3">
                 {t.privacyNote}
