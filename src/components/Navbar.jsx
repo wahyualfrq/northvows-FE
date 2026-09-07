@@ -50,6 +50,7 @@ export default function Navbar() {
           <a href="#hero" className="hover:text-primary transition-colors">{t.home}</a>
           <a href="#services" className="hover:text-primary transition-colors">{t.services}</a>
           <a href="#portfolio" className="hover:text-primary transition-colors">{t.portfolio}</a>
+          <a href="#paket-layanan" className="hover:text-primary transition-colors">{t.packages}</a>
           <a href="#products" className="hover:text-primary transition-colors">{t.products}</a>
           <a href="#how-it-works" className="hover:text-primary transition-colors">{t.howItWorks}</a>
           <a href="#chat-proof" className="hover:text-primary transition-colors">{t.chatProof}</a>
@@ -107,6 +108,7 @@ export default function Navbar() {
             <a href="#hero" className="hover:text-primary mobile-link" onClick={closeMobileMenu}>{t.home}</a>
             <a href="#services" className="hover:text-primary mobile-link" onClick={closeMobileMenu}>{t.services}</a>
             <a href="#portfolio" className="hover:text-primary mobile-link" onClick={closeMobileMenu}>{t.portfolio}</a>
+            <a href="#paket-layanan" className="hover:text-primary mobile-link" onClick={closeMobileMenu}>{t.packages}</a>
             <a href="#products" className="hover:text-primary mobile-link" onClick={closeMobileMenu}>{t.products}</a>
             <a href="#how-it-works" className="hover:text-primary mobile-link" onClick={closeMobileMenu}>{t.howItWorks}</a>
             <a href="#chat-proof" className="hover:text-primary mobile-link" onClick={closeMobileMenu}>{t.chatProof}</a>

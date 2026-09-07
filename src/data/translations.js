@@ -5,6 +5,7 @@ export const translations = {
       home: "Beranda",
       services: "Layanan",
       portfolio: "Portofolio",
+      packages: "Paket Layanan",
       products: "Produk",
       howItWorks: "Cara Kerja",
       reviews: "Ulasan",
@@ -119,6 +120,78 @@ export const translations = {
         code: "Coding"
       },
       detailBtn: "Detail Proyek"
+    },
+    // Paket Layanan
+    packages: {
+      badge: "PILIH PAKET TERBAIK",
+      title: "Pilih Paket yang Sesuai dengan Kebutuhan Anda",
+      description: "Mulai dari tugas kuliah, persiapan sidang, hingga pengembangan website profesional. Pilih paket yang paling sesuai dengan target dan anggaran Anda.",
+      starter: {
+        subtitle: "Cocok untuk mahasiswa dan kebutuhan akademik dasar.",
+        originalPrice: "Rp150.000",
+        price: "Rp4.000",
+        btnText: "Mulai Sekarang",
+        discountBadge: "PROMO HARI INI",
+        services: [
+          "Resume Jurnal",
+          "CV ATS Friendly",
+          "PPT Presentasi Dasar",
+          "Tugas Coding Ringan",
+          "Perbaikan Dokumen Akademik"
+        ],
+        benefits: [
+          "Konsultasi Gratis",
+          "1x Revisi",
+          "Fast Response",
+          "Estimasi 1 Hari"
+        ]
+      },
+      pro: {
+        badge: "Paling Banyak Dipilih",
+        subtitle: "Cocok untuk skripsi, sidang, project kampus, dan portofolio.",
+        originalPrice: "Rp500.000",
+        price: "Rp99.000",
+        btnText: "Pilih Paket Pro",
+        discountBadge: "HEMAT 80%",
+        services: [
+          "PPT Sidang Premium",
+          "UI/UX Design Figma",
+          "Tugas Informatika & Coding",
+          "Resume Jurnal Lengkap",
+          "Optimasi LinkedIn",
+          "Persiapan Portofolio"
+        ],
+        benefits: [
+          "Prioritas Pengerjaan",
+          "3x Revisi",
+          "Konsultasi Gratis",
+          "Dokumentasi Rapi",
+          "Dukungan Sampai Deadline"
+        ]
+      },
+      professional: {
+        subtitle: "Cocok untuk freelancer, UMKM, startup, dan kebutuhan profesional.",
+        originalPrice: "Rp1.500.000",
+        price: "Rp499.000",
+        btnText: "Konsultasi Proyek",
+        discountBadge: "BEST VALUE",
+        services: [
+          "Landing Page",
+          "Company Profile Website",
+          "Sistem Informasi Laravel",
+          "Dashboard Admin",
+          "Fullstack Web Application",
+          "UI/UX Professional Design"
+        ],
+        benefits: [
+          "Priority Support",
+          "Revisi Prioritas",
+          "Dokumentasi Lengkap",
+          "Source Code Rapi",
+          "Bantuan Deployment",
+          "Demo & Panduan Penggunaan"
+        ]
+      }
     },
     // Products
     products: {
@@ -302,7 +375,7 @@ export const translations = {
       title: "Mengapa Mahasiswa Memilih NorthVows?",
       description: "Kami bukan sekadar joki biasa, melainkan partner pengerjaan terpercaya dengan standar akademis tinggi dan perlindungan data 100%.",
       badge1: "100% Kerahasiaan Identitas Dijamin",
-      badge2: "Bebas Revisi Sesuai Catatan Dosen",
+      badge2: "Termasuk Revisi Berdasarkan Catatan Dosen",
       points: [
         {
           title: 'Hasil Cepat & Tepat Waktu',
@@ -405,6 +478,7 @@ export const translations = {
       home: "Home",
       services: "Services",
       portfolio: "Portfolio",
+      packages: "Packages",
       products: "Products",
       howItWorks: "How It Works",
       reviews: "Reviews",
@@ -519,6 +593,78 @@ export const translations = {
         code: "Coding"
       },
       detailBtn: "Project Details"
+    },
+    // Packages
+    packages: {
+      badge: "CHOOSE THE BEST PACKAGE",
+      title: "Choose the Package That Suits Your Needs",
+      description: "From university assignments, defense preparation, to professional website development. Choose the package that best fits your goals and budget.",
+      starter: {
+        subtitle: "Suitable for students and basic academic needs.",
+        originalPrice: "Rp150.000",
+        price: "Rp4.000",
+        btnText: "Get Started",
+        discountBadge: "TODAY PROMO",
+        services: [
+          "Journal Resume",
+          "ATS Friendly Resume",
+          "Basic Presentation PPT",
+          "Light Coding Assignment",
+          "Academic Document Proofing"
+        ],
+        benefits: [
+          "Free Consultation",
+          "1x Revision",
+          "Fast Response",
+          "1 Day Estimate"
+        ]
+      },
+      pro: {
+        badge: "Most Popular",
+        subtitle: "Suitable for thesis, defense, campus projects, and portfolios.",
+        originalPrice: "Rp500.000",
+        price: "Rp99.000",
+        btnText: "Choose Pro Package",
+        discountBadge: "SAVE 80%",
+        services: [
+          "Premium Defense PPT",
+          "Figma UI/UX Design",
+          "Informatics & Coding Tasks",
+          "Complete Journal Resume",
+          "LinkedIn Optimization",
+          "Portfolio Preparation"
+        ],
+        benefits: [
+          "Priority Processing",
+          "3x Revisions",
+          "Free Consultation",
+          "Neat Documentation",
+          "Deadline Support"
+        ]
+      },
+      professional: {
+        subtitle: "Suitable for freelancers, MSMEs, startups, and professional needs.",
+        originalPrice: "Rp1.500.000",
+        price: "Rp499.000",
+        btnText: "Consult Project",
+        discountBadge: "BEST VALUE",
+        services: [
+          "Landing Page",
+          "Company Profile Website",
+          "Laravel Information System",
+          "Admin Dashboard",
+          "Fullstack Web Application",
+          "UI/UX Professional Design"
+        ],
+        benefits: [
+          "Priority Support",
+          "Priority Revisions",
+          "Full Documentation",
+          "Clean Source Code",
+          "Deployment Assistance",
+          "Demo & Usage Guide"
+        ]
+      }
     },
     // Products
     products: {
@@ -787,7 +933,6 @@ export const translations = {
       colServicesTitle: "Services",
       colInfoTitle: "Information",
       copyright: "© 2026 NorthVows. All rights reserved. Student Academic & Project Solution.",
-      designedFor: "Designed with precision for Students."
     },
     // Modal
     modal: {

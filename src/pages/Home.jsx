@@ -9,6 +9,7 @@ import HeroSection from '../sections/HeroSection';
 import TrustMetricsSection from '../sections/TrustMetricsSection';
 import ServicesSection from '../sections/ServicesSection';
 import PortfolioSection from '../sections/PortfolioSection';
+import PackagesSection from '../sections/PackagesSection';
 import ProductsSection from '../sections/ProductsSection';
 import HowItWorksSection from '../sections/HowItWorksSection';
 import ChatProofSection from '../sections/ChatProofSection';
@@ -64,6 +65,7 @@ export default function Home() {
         <TrustMetricsSection />
         <ServicesSection />
         <PortfolioSection onOpenModal={handleOpenModal} />
+        <PackagesSection />
         <ProductsSection />
         <HowItWorksSection />
         <ChatProofSection />
